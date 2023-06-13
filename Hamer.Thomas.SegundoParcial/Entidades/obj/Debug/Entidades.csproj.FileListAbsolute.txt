@@ -1,0 +1,6 @@
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Entidades.dll
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Entidades.pdb
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.dll
+C:\Users\ElectronicG\source\repos\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.pdb
