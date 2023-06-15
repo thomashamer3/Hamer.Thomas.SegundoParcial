@@ -39,7 +39,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = $"SELECT * FROM Usuarios WHERE nombreUsuario='{usuario.NombreUsuario}'";
+                this.comando.CommandText = $"SELECT * FROM Usuarios WHERE nombreUsuarios='{usuario.NombreUsuario}'";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -49,7 +49,7 @@ namespace Entidades
                 {
                     this.lector.Close();
 
-                    string SQL = "INSERT INTO Usuarios (nombreUsuario, contraseña) VALUES(";
+                    string SQL = "INSERT INTO Usuarios (nombreUsuarios, clave) VALUES(";
                     SQL = SQL + "'" + usuario.NombreUsuario + "','" + usuario.Clave + "')";
 
                     this.comando.CommandText = SQL;
@@ -94,7 +94,7 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Salas (CreadorID,EstadoSala,PuntosJ1,PuntosJ2,TurnosRestantes,TiempoDePartida) VALUES(";
+                string sql = "INSERT INTO Salas (CreadoId,EstadoSala,PuntosJ1,PuntosJ2,TurnosRestantes,TiempoDePartida) VALUES(";
                 sql = sql + "'" + sala.Creador + "','" + sala.Estado + "'," + sala.PuntosJ1.ToString() + "," + sala.PuntosJ2.ToString() + "," + sala.TurnosRestantes1 +
                     ",'" + sala.TiempoDePartida1 + "')";
 
@@ -145,16 +145,13 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Estadistica (PartidasJugadas,PartidasGanadas,PorcentajeGanadas) VALUES(";
-                sql = sql + estadistica.PartidasJugadas + "," + estadistica.PartidasGanadas + ")";
+                string sql = "INSERT INTO Estadistica (PartidasJugadas, PartidasGanadas) VALUES (@PartidasJugadas, @PartidasGanadas)";
 
-                this.comando = new SqlCommand();
+                SqlCommand comando = new SqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@PartidasJugadas", estadistica.PartidasJugadas);
+                comando.Parameters.AddWithValue("@PartidasGanadas", estadistica.PartidasGanadas);
 
-                this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = sql;
-                this.comando.Connection = this.conexion;
-
-                this.conexion.Open();
+                conexion.Open();
 
                 int filasAfectadas = this.comando.ExecuteNonQuery();
 
@@ -250,16 +247,16 @@ namespace Entidades
             {
                 this.comando = new SqlCommand();
 
-                this.comando.Parameters.AddWithValue("@CreadorID", param.Creador);
+                this.comando.Parameters.AddWithValue("@CreadorId", param.Creador);
                 this.comando.Parameters.AddWithValue("@EstadoSala", param.Estado);
                 this.comando.Parameters.AddWithValue("@PuntosJ1", param.PuntosJ1);
                 this.comando.Parameters.AddWithValue("@PuntosJ2", param.PuntosJ2);
                 this.comando.Parameters.AddWithValue("@TurnosRestantes", param.TurnosRestantes1);
                 this.comando.Parameters.AddWithValue("@TiempoDePartida", param.TiempoDePartida1);
-                this.comando.Parameters.AddWithValue("@ID", param.IDSala1);
+                this.comando.Parameters.AddWithValue("@ID", param.IDSala);
 
                 string sql = "UPDATE Salas ";
-                sql += "SET CreadorID = @CreadorID, EstadoSala = @EstadoSala, PuntosJ1 = @PuntosJ1, PuntosJ2 = @PuntosJ2, TurnosRestantes = @TurnosRestantes, TiempoDePartida = @TiempoDePartida ";
+                sql += "SET CreadorId = @CreadorId, EstadoSala = @EstadoSala, PuntosJ1 = @PuntosJ1, PuntosJ2 = @PuntosJ2, TurnosRestantes = @TurnosRestantes, TiempoDePartida = @TiempoDePartida ";
                 sql += "WHERE ID = @ID";
 
                 this.comando.CommandType = CommandType.Text;
@@ -290,14 +287,6 @@ namespace Entidades
             return rta;
         }
 
-        /// <summary>
-        /// Esta función recupera estadísticas de un usuario por su ID de una base de datos.
-        /// </summary>
-        /// <param name="index">El parámetro de índice es un valor entero que representa el IdUsuario
-        /// (ID de usuario) para el que se recuperan las estadísticas de la base de datos.</param>
-        /// <returns>
-        /// Un objeto de tipo Estadísticas.
-        /// </returns>
         public Estadisticas ObtenerEstadisticaPorId(int index)
         {
             Estadisticas item = new Estadisticas();
@@ -356,7 +345,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT ID FROM Usuarios WHERE nombreUsuario = '" + usuario.NombreUsuario + "'";
+                this.comando.CommandText = "SELECT id FROM Usuarios WHERE nombreUsuarios = '" + usuario.NombreUsuario + "'";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -386,55 +375,6 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función recupera estadísticas de un usuario con una ID determinada de una base de
-        /// datos.
-        /// </summary>
-        /// <param name="index">El parámetro de índice es un valor entero que representa el ID del
-        /// usuario cuyas estadísticas se recuperan de la base de datos.</param>
-        /// <returns>
-        /// Un objeto de tipo Estadísticas.
-        /// </returns>
-        public Estadisticas ObtenerIDUsuarioEstadistica(int index)
-        {
-            Estadisticas item = new Estadisticas();
-
-            try
-            {
-                this.comando = new SqlCommand();
-
-                this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT * FROM Estadistica WHERE IdUsuario = " + index;
-                this.comando.Connection = this.conexion;
-
-                this.conexion.Open();
-
-                this.lector = comando.ExecuteReader();
-
-                while (lector.Read())
-                {
-                    item.Id = lector.GetInt32(0);
-                    item.PartidasJugadas = lector.GetInt32(1);
-                    item.PartidasGanadas = lector.GetInt32(2);
-                }
-
-                lector.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                if (this.conexion.State == ConnectionState.Open)
-                {
-                    this.conexion.Close();
-                }
-            }
-
-            return item;
-        }
-
-        /// <summary>
         /// Esta función recupera una lista de datos de una tabla de base de datos llamada "Salas" y la
         /// devuelve como una lista de objetos de tipo "Salas".
         /// </summary>
@@ -450,7 +390,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT b.nombreUsuario,a.EstadoSala,a.PuntosJ1,a.PuntosJ2,a.TurnosRestantes,a.TiempoDePartida,a.ID,a.CreadorID FROM Salas a left join Usuarios b on b.id=a.CreadorID";
+                this.comando.CommandText = "SELECT b.nombreUsuarios,a.EstadoSala,a.PuntosJ1,a.PuntosJ2,a.TurnosRestantes,a.TiempoDePartida,a.Id,a.CreadorId FROM Salas a left join Usuarios b on b.id=a.CreadorId";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -461,13 +401,13 @@ namespace Entidades
                 {
                     Salas item = new Salas();
 
-                    item.CreadorUsername = lector[0].ToString();
+                    item.CreadorNombre = lector[0].ToString();
                     item.Estado = lector[1].ToString();
                     item.PuntosJ1 = lector.GetInt32(2);
                     item.PuntosJ2 = lector.GetInt32(3);
                     item.TurnosRestantes1 = lector.GetInt32(4);
                     item.TiempoDePartida1 = lector[5].ToString();
-                    item.IDSala1 = lector.GetInt32(6);
+                    item.IDSala = lector.GetInt32(6);
                     item.Creador = lector.GetInt32(7);
 
                     lista.Add(item);
@@ -507,7 +447,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT b.nombreUsuario,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
+                this.comando.CommandText = "SELECT b.nombreUsuarios,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -541,6 +481,152 @@ namespace Entidades
             }
 
             return lista;
+        }
+
+        /// <summary>
+        /// Esta función recupera una lista de todas las Salas en una base de datos con su
+        /// información respectiva.
+        /// </summary>
+        /// <returns>
+        /// Una lista de objetos de tipo "Salas".
+        /// </returns>
+        public List<Salas> ObtenerListaSalasEntera()
+        {
+            List<Salas> lista = new List<Salas>();
+
+            try
+            {
+                this.comando = new SqlCommand();
+                this.comando.CommandType = CommandType.Text;
+                this.comando.CommandText = "SELECT CreadorId, EstadoSala, PuntosJ1, PuntosJ2, TurnosRestantes, TiempoDePartida, ID FROM Salas";
+                this.comando.Connection = this.conexion;
+
+                this.conexion.Open();
+
+                this.lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Salas sala = new Salas();
+
+                    sala.Creador = lector.GetInt32(0);
+                    sala.Estado = lector.GetString(1);
+                    sala.PuntosJ1 = lector.GetInt32(2);
+                    sala.PuntosJ2 = lector.GetInt32(3);
+                    sala.TurnosRestantes1 = lector.GetInt32(4);
+                    sala.TiempoDePartida1 = lector.GetString(5);
+                    sala.IDSala = lector.GetInt32(6);
+
+                    lista.Add(sala);
+                }
+
+                lector.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return lista;
+        }
+
+        public List<Usuarios> ObtenerListaUsuariosEntera()
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+
+            try
+            {
+                this.comando = new SqlCommand();
+                this.comando.CommandType = CommandType.Text;
+                this.comando.CommandText = "SELECT nombreUsuarios, clave FROM Usuarios";
+                this.comando.Connection = this.conexion;
+
+                this.conexion.Open();
+
+                this.lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    Usuarios usuarios = new Usuarios();
+
+                    usuarios.NombreUsuario = lector[0].ToString();
+                    usuarios.Clave = lector[1].ToString();
+
+                    lista.Add(usuarios);
+                }
+
+                lector.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return lista;
+        }
+
+        /// <summary>
+        /// Esta función selecciona y devuelve datos estadísticos para un usuario por su ID de una base
+        /// de datos.
+        /// </summary>
+        /// <param name="index">El parámetro index es un valor entero que representa el IdUsuario (ID de
+        /// usuario) del registro Estadistica (estadísticas) que debe recuperarse de la base de
+        /// datos.</param>
+        /// <returns>
+        /// Un objeto de tipo Estadísticas.
+        /// </returns>
+        public Estadisticas SelectById(int index)
+        {
+            Estadisticas item = new Estadisticas();
+
+            try
+            {
+                this.comando = new SqlCommand();
+
+                this.comando.CommandType = CommandType.Text;
+                this.comando.CommandText = "SELECT * FROM Estadistica WHERE IdUsuario = " + index;
+                this.comando.Connection = this.conexion;
+
+                this.conexion.Open();
+
+                this.lector = comando.ExecuteReader();
+
+                while (lector.Read())
+                {
+                    item.Id = lector.GetInt32(0);
+                    item.PartidasJugadas = lector.GetInt32(1);
+                    item.PartidasGanadas = lector.GetInt32(2);
+                }
+
+                lector.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return item;
         }
     }
 }
