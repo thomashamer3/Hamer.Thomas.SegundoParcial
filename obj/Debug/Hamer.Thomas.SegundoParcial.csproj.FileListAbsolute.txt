@@ -82,3 +82,9 @@ C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hame
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.csproj.CopyComplete
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.exe
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.pdb
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.Estadistica.resources
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.Juego.resources
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Entidades.dll
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Entidades.pdb
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Entidades.dll.config
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.SalasPartida.resources
