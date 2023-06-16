@@ -2,6 +2,8 @@
 {
     public class Salas
     {
+        #region Atributos
+
         private int creador;
         private string creadorNombre;
         private string estado;
@@ -10,6 +12,10 @@
         private int puntosJ2;
         private string TiempoDePartida;
         private int TurnosRestantes;
+
+        #endregion Atributos
+
+        #region Constructores
 
         public Salas()
         {
@@ -31,6 +37,10 @@
             this.idSala = idSala;
         }
 
+        #endregion Constructores
+
+        #region Propiedades
+
         public int Creador { get => creador; set => creador = value; }
         public string CreadorNombre { get => creadorNombre; set => creadorNombre = value; }
         public string Estado { get => estado; set => estado = value; }
@@ -39,5 +49,7 @@
         public int PuntosJ2 { get => puntosJ2; set => puntosJ2 = value; }
         public string TiempoDePartida1 { get => TiempoDePartida; set => TiempoDePartida = value; }
         public int TurnosRestantes1 { get => TurnosRestantes; set => TurnosRestantes = value; }
+
+        #endregion Propiedades
     }
 }

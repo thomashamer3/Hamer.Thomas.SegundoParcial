@@ -9,6 +9,8 @@ namespace Hamer.Thomas.SegundoParcial
 {
     public partial class Juego : Form
     {
+        #region Atributos
+
         public static List<Dados> Listadados = Dados.GetDados();
         private BaseDeDatos ado = new BaseDeDatos();
         private int contador = 0;
@@ -32,10 +34,18 @@ namespace Hamer.Thomas.SegundoParcial
         private int turnoJugador = 1;
         private string ultimoUsado;
 
+        #endregion Atributos
+
+        #region Constructor
+
         public Juego()
         {
             InitializeComponent();
         }
+
+        #endregion Constructor
+
+        #region Propiedades
 
         public int ContadorTurnos { get => contadorTurnos; set => contadorTurnos = value; }
         public string CreadorNombre { get => creadorNombre; set => creadorNombre = value; }
@@ -46,8 +56,12 @@ namespace Hamer.Thomas.SegundoParcial
         public int J2Puntos { get => j2Puntos; set => j2Puntos = value; }
         public string TiempoDePartida { get => tiempoDePartida; set => tiempoDePartida = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// La función ActivarPB habilita todos los cuadros de imagen en un programa C#.
+        /// La Metodo ActivarPB habilita todos los cuadros de imagen en un programa C#.
         /// </summary>
         private void ActivarPB()
         {
@@ -63,7 +77,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función actualiza los puntos del jugador actual y cambia al turno del siguiente jugador
+        /// Esta Metodo actualiza los puntos del jugador actual y cambia al turno del siguiente jugador
         /// en un juego de dados.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento (en este caso, el botón
@@ -132,7 +146,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función guarda y sale de una sala de juegos, actualizando las estadísticas si el juego
+        /// Esta Metodo guarda y sale de una sala de juegos, actualizando las estadísticas si el juego
         /// ha terminado.
         /// </summary>
         /// <param name="sender">El objeto que provocó el evento (en este caso, el botón en el que se
@@ -170,7 +184,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función cierra el formulario actual cuando se hace clic en el botón "Salir".
+        /// La Metodo cierra el formulario actual cuando se hace clic en el botón "Salir".
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el botón en el que se
         /// hizo clic (btnSalir).</param>
@@ -184,7 +198,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función maneja el evento de clic de un botón para tirar los dados y actualizar el
+        /// La Metodo maneja el evento de clic de un botón para tirar los dados y actualizar el
         /// contador de tiradas restantes.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento (en este caso, el botón
@@ -226,7 +240,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "Cinco" cuenta el número de veces que aparece el valor 5 en una lista de tiradas
+        /// La Metodo "Cinco" cuenta el número de veces que aparece el valor 5 en una lista de tiradas
         /// de dados y devuelve el recuento total.
         /// </summary>
         /// <returns>
@@ -250,7 +264,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función cuenta el número de veces que aparece el valor 4 en una lista de tiradas de dados
+        /// La Metodo cuenta el número de veces que aparece el valor 4 en una lista de tiradas de dados
         /// y devuelve el recuento total.
         /// </summary>
         /// <returns>
@@ -274,7 +288,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "Dos" cuenta el número de veces que aparece el valor 2 en una lista de tiradas de
+        /// La Metodo "Dos" cuenta el número de veces que aparece el valor 2 en una lista de tiradas de
         /// dados y devuelve el recuento total.
         /// </summary>
         /// <returns>
@@ -298,7 +312,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función comprueba si hay una secuencia de cinco valores de dados y devuelve una
+        /// La Metodo comprueba si hay una secuencia de cinco valores de dados y devuelve una
         /// puntuación de 20 si la hay, o 0 si hay valores duplicados.
         /// </summary>
         /// <returns>
@@ -336,7 +350,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función comprueba si un conjunto de cinco tiradas de dados contiene una combinación de
+        /// Esta Metodo comprueba si un conjunto de cinco tiradas de dados contiene una combinación de
         /// casa completa y devuelve una puntuación de 35 si la contiene.
         /// </summary>
         /// <returns>
@@ -423,6 +437,9 @@ namespace Hamer.Thomas.SegundoParcial
             return valor;
         }
 
+        /// <summary>
+        /// La Metodo determina el ganador de un juego y actualiza el estado del juego en consecuencia.
+        /// </summary>
         private void Ganador()
         {
             EstadoSala = "Finalizada";
@@ -452,7 +469,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función verifica si los cinco dados tienen el mismo valor y devuelve 50 si es verdadero,
+        /// La Metodo verifica si los cinco dados tienen el mismo valor y devuelve 50 si es verdadero,
         /// de lo contrario devuelve 0.
         /// </summary>
         /// <returns>
@@ -480,6 +497,16 @@ namespace Hamer.Thomas.SegundoParcial
             return generala;
         }
 
+        /// <summary>
+        /// Esta Metodo solicita al usuario que confirme el cierre de la aplicación y guarda los datos
+        /// antes de cerrar si se confirma.
+        /// </summary>
+        /// <param name="sender">El objeto que generó el evento, en este caso, el formulario
+        /// Juego.</param>
+        /// <param name="FormClosingEventArgs">Este es un argumento de evento que se pasa al controlador
+        /// de eventos FormClosing. Contiene información sobre el evento, como si el usuario o el
+        /// sistema están cerrando el formulario, y permite que el controlador de eventos cancele el
+        /// cierre del formulario si es necesario.</param>
         private void Juego_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!poderCerrar)
@@ -501,7 +528,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función calcula la suma de los valores de los primeros cinco elementos de una lista y
+        /// La Metodo calcula la suma de los valores de los primeros cinco elementos de una lista y
         /// devuelve el resultado.
         /// </summary>
         /// <returns>
@@ -523,7 +550,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función cambia el estado de un elemento de datos y actualiza la visibilidad de una
+        /// Esta Metodo cambia el estado de un elemento de datos y actualiza la visibilidad de una
         /// etiqueta en consecuencia cuando se hace clic en un cuadro de imagen específico.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el
@@ -547,7 +574,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic para un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic para un cuadro de imagen y realiza varias acciones
         /// relacionadas con la lógica del juego.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -567,7 +594,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función cambia el estado de un elemento de datos y oculta/muestra una etiqueta en
+        /// Esta Metodo cambia el estado de un elemento de datos y oculta/muestra una etiqueta en
         /// consecuencia cuando se hace clic en un cuadro de imagen determinado.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -591,7 +618,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función maneja el evento de clic para un cuadro de imagen, actualiza las variables del
+        /// La Metodo maneja el evento de clic para un cuadro de imagen, actualiza las variables del
         /// juego y cambia el color de una etiqueta.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -611,7 +638,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic para un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic para un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un cuadrado, calcular puntos y
         /// actualizar el color del texto de una etiqueta.
         /// </summary>
@@ -632,7 +659,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función cambia el estado de un elemento de datos y actualiza la visibilidad de una
+        /// Esta Metodo cambia el estado de un elemento de datos y actualiza la visibilidad de una
         /// etiqueta en consecuencia cuando se hace clic en un cuadro de imagen.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -656,7 +683,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic de un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic de un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, incluido el cálculo de puntos y el cambio de colores de las
         /// etiquetas.
         /// </summary>
@@ -676,7 +703,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic de un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic de un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un botón como presionado, calcular
         /// puntos y actualizar el color de una etiqueta.
         /// </summary>
@@ -697,7 +724,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función maneja el evento de clic de un cuadro de imagen y realiza acciones relacionadas
+        /// La Metodo maneja el evento de clic de un cuadro de imagen y realiza acciones relacionadas
         /// con un juego de Generala.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -717,7 +744,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic de un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic de un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un cuadrado, calcular puntos y
         /// actualizar etiquetas.
         /// </summary>
@@ -737,6 +764,16 @@ namespace Hamer.Thomas.SegundoParcial
             lblCantidadLibre.ForeColor = Color.Yellow;
         }
 
+        /// <summary>
+        /// La Metodo maneja el evento de clic de un cuadro de imagen relacionado con un juego de
+        /// póquer y actualiza el estado del juego en consecuencia.
+        /// </summary>
+        /// <param name="sender">El objeto que generó el evento, en este caso, el control
+        /// pictureBoxPoker.</param>
+        /// <param name="EventArgs">EventArgs es una clase en C# que proporciona datos para un evento.
+        /// No contiene datos, pero se utiliza como clase base para las clases que proporcionan datos de
+        /// eventos. En este caso, se usa como un parámetro para el método del controlador de eventos
+        /// pictureBoxPoker_Click, que se llama cuando el usuario</param>
         private void pictureBoxPoker_Click(object sender, EventArgs e)
         {
             RestaurarColores();
@@ -748,7 +785,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función maneja el evento de clic para un cuadro de imagen y realiza varias acciones
+        /// Esta Metodo maneja el evento de clic para un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un botón como presionado, calcular
         /// puntos y actualizar el color de una etiqueta.
         /// </summary>
@@ -769,7 +806,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función se activa cuando se hace clic en un cuadro de imagen y realiza varias acciones
+        /// La Metodo se activa cuando se hace clic en un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un cuadrado, actualizar puntos y
         /// cambiar el color de una etiqueta.
         /// </summary>
@@ -790,7 +827,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función cambia el estado de un elemento de datos y actualiza la visibilidad de una
+        /// Esta Metodo cambia el estado de un elemento de datos y actualiza la visibilidad de una
         /// etiqueta en consecuencia cuando se hace clic en un cuadro de imagen específico.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -814,7 +851,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función maneja el evento de clic de un cuadro de imagen y realiza varias acciones
+        /// La Metodo maneja el evento de clic de un cuadro de imagen y realiza varias acciones
         /// relacionadas con un juego, como restaurar colores, marcar un botón como presionado, calcular
         /// puntos y actualizar el color de una etiqueta.
         /// </summary>
@@ -835,7 +872,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función cambia el estado de un objeto de datos y oculta/muestra una etiqueta en
+        /// Esta Metodo cambia el estado de un objeto de datos y oculta/muestra una etiqueta en
         /// consecuencia cuando se hace clic en un cuadro de imagen.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -859,7 +896,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función comprueba si hay un póquer (cuatro del mismo tipo) en una lista de valores de
+        /// La Metodo comprueba si hay un póquer (cuatro del mismo tipo) en una lista de valores de
         /// dados y devuelve una puntuación de 40 si lo encuentra.
         /// </summary>
         /// <returns>
@@ -896,7 +933,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función RestaurarColores restaura el color de todas las etiquetas de un panel a blanco.
+        /// La Metodo RestaurarColores restaura el color de todas las etiquetas de un panel a blanco.
         /// </summary>
         private void RestaurarColores()
         {
@@ -907,7 +944,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función restablece el estado y los valores de cinco imágenes y etiquetas de dados.
+        /// La Metodo restablece el estado y los valores de cinco imágenes y etiquetas de dados.
         /// </summary>
         private void RestaurarDados()
         {
@@ -936,7 +973,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función desactiva ciertos cuadros de imagen y cambia el color de ciertas etiquetas
+        /// Esta Metodo desactiva ciertos cuadros de imagen y cambia el color de ciertas etiquetas
         /// según los elementos de una lista.
         /// </summary>
         /// <param name="listaTachado">Una lista de cadenas que contienen los nombres de los elementos
@@ -1007,7 +1044,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "Seis" cuenta el número de veces que aparece el valor 6 en una lista de tiradas
+        /// La Metodo "Seis" cuenta el número de veces que aparece el valor 6 en una lista de tiradas
         /// de dados y devuelve el recuento total.
         /// </summary>
         /// <returns>
@@ -1031,7 +1068,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función verifica los elementos tachados según el turno del jugador.
+        /// Esta Metodo verifica los elementos tachados según el turno del jugador.
         /// </summary>
         /// <param name="jugadorTurno">una variable entera que representa el turno del jugador actual
         /// (ya sea 1 o 2).</param>
@@ -1048,7 +1085,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función lanza un dado y muestra la imagen correspondiente en un cuadro de imagen.
+        /// Esta Metodo lanza un dado y muestra la imagen correspondiente en un cuadro de imagen.
         /// </summary>
         /// <param name="PictureBox">Un control en Windows Forms que muestra una imagen.</param>
         /// <param name="index">El parámetro índice es un número entero que representa el índice de los
@@ -1091,7 +1128,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función cuenta el número de veces que aparece el valor 3 en una lista de tiradas de dados
+        /// La Metodo cuenta el número de veces que aparece el valor 3 en una lista de tiradas de dados
         /// y devuelve el recuento total.
         /// </summary>
         /// <returns>
@@ -1115,7 +1152,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función cuenta el número de dados con valor 1 en una lista de dados.
+        /// La Metodo cuenta el número de dados con valor 1 en una lista de dados.
         /// </summary>
         /// <returns>
         /// El método devuelve un valor entero, que es el número de veces que aparece el valor 1 en la
@@ -1138,7 +1175,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "Valores" llama a varias otras funciones relacionadas con un juego de dados para
+        /// La Metodo "Valores" llama a varias otras Metodoones relacionadas con un juego de dados para
         /// calcular y almacenar puntajes para diferentes categorías.
         /// </summary>
         private void Valores()
@@ -1155,5 +1192,7 @@ namespace Hamer.Thomas.SegundoParcial
             Full();
             Escalera();
         }
+
+        #endregion Metodos
     }
 }

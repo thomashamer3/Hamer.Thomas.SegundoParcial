@@ -7,6 +7,8 @@ namespace Entidades
 {
     public class Estadisticas : ISelecionar<Estadisticas>
     {
+        #region Atributos
+
         private static string cadenaConexion;
         private SqlCommand comando;
         private SqlConnection conexion;
@@ -15,6 +17,10 @@ namespace Entidades
         private string nombreUsuario;
         private int partidasGanadas;
         private int partidasJugadas;
+
+        #endregion Atributos
+
+        #region Constructores
 
         static Estadisticas()
         {
@@ -38,13 +44,21 @@ namespace Entidades
             this.partidasJugadas = partidasJugadas;
         }
 
+        #endregion Constructores
+
+        #region Propiedades
+
         public int Id { get => id; set => id = value; }
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
         public int PartidasGanadas { get => partidasGanadas; set => partidasGanadas = value; }
         public int PartidasJugadas { get => partidasJugadas; set => partidasJugadas = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// Esta función selecciona y devuelve una lista de estadísticas de los usuarios que han jugado
+        /// Este Metodo selecciona y devuelve una lista de estadísticas de los usuarios que han jugado
         /// y ganado juegos.
         /// </summary>
         /// <returns>
@@ -94,5 +108,7 @@ namespace Entidades
 
             return lista;
         }
+
+        #endregion Metodos
     }
 }

@@ -7,10 +7,16 @@ namespace Entidades
 {
     public class BaseDeDatos
     {
+        #region Atributos
+
         private static string cadenaConexion;
         private SqlCommand comando;
         private SqlConnection conexion;
         private SqlDataReader lector;
+
+        #endregion Atributos
+
+        #region Constructores
 
         static BaseDeDatos()
         {
@@ -22,8 +28,12 @@ namespace Entidades
             this.conexion = new SqlConnection(BaseDeDatos.cadenaConexion);
         }
 
+        #endregion Constructores
+
+        #region Metodos
+
         /// <summary>
-        /// Esta función agrega un nuevo usuario a una base de datos si el usuario aún no existe.
+        /// Este Metodo agrega un nuevo usuario a una base de datos si el usuario aún no existe.
         /// </summary>
         /// <param name="Usuarios">Una clase que representa a un usuario con propiedades como
         /// NombreUsuario (nombre de usuario) y Clave (contraseña).</param>
@@ -80,7 +90,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función agrega datos a una tabla de base de datos para una sala de juegos.
+        /// Este Metodo agrega datos a una tabla de base de datos para una sala de juegos.
         /// </summary>
         /// <param name="Salas">Una clase que representa una sala de juegos con propiedades como Creador
         /// (ID del creador), Estado (estado de la sala), PuntosJ1 (puntos del jugador 1), PuntosJ2
@@ -129,7 +139,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función agrega una nueva fila a una tabla de base de datos llamada "Estadistica" con
+        /// Este Metodo agrega una nueva fila a una tabla de base de datos llamada "Estadistica" con
         /// los valores proporcionados para "PartidasJugadas" y "PartidasGanadas".
         /// </summary>
         /// <param name="Estadisticas">Una clase que representa estadísticas, con propiedades para
@@ -176,7 +186,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// La función guarda estadísticas para un usuario en una base de datos.
+        /// El Metodo guarda estadísticas para un usuario en una base de datos.
         /// </summary>
         /// <param name="Estadisticas">Una clase que representa estadísticas para un usuario, con
         /// propiedades para Id (ID de usuario), PartidasJugadas (número de juegos jugados) y
@@ -229,7 +239,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función actualiza un registro en una tabla de base de datos con los parámetros
+        /// Este Metodo actualiza un registro en una tabla de base de datos con los parámetros
         /// proporcionados y devuelve un valor booleano que indica si la operación se realizó
         /// correctamente.
         /// </summary>
@@ -287,6 +297,14 @@ namespace Entidades
             return rta;
         }
 
+        /// <summary>
+        /// Este Metodo recupera estadísticas de un usuario por su ID de una base de datos.
+        /// </summary>
+        /// <param name="index">El parámetro de índice es un valor entero que representa el IdUsuario
+        /// (ID de usuario) para el que se recuperan las estadísticas de la base de datos.</param>
+        /// <returns>
+        /// Un objeto de tipo Estadísticas.
+        /// </returns>
         public Estadisticas ObtenerEstadisticaPorId(int index)
         {
             Estadisticas item = new Estadisticas();
@@ -327,14 +345,14 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función recupera la ID de un usuario de una base de datos en función de su nombre de
+        /// Este Metodo recupera la ID de un usuario de una base de datos en Metodo de su nombre de
         /// usuario.
         /// </summary>
         /// <param name="Usuarios">Una clase que representa a un usuario con propiedades como
         /// NombreUsuario (username).</param>
         /// <returns>
         /// El método devuelve un valor entero, que es el ID de un usuario obtenido de una base de datos
-        /// SQL en función de su nombre de usuario. Si no se encuentra el usuario, el método devuelve
+        /// SQL en Metodo de su nombre de usuario. Si no se encuentra el usuario, el método devuelve
         /// -1.
         /// </returns>
         public int ObtenerIDUsuario(Usuarios usuario)
@@ -375,7 +393,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función recupera una lista de datos de una tabla de base de datos llamada "Salas" y la
+        /// Este Metodo recupera una lista de datos de una tabla de base de datos llamada "Salas" y la
         /// devuelve como una lista de objetos de tipo "Salas".
         /// </summary>
         /// <returns>
@@ -431,7 +449,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función recupera una lista de estadísticas de todos los usuarios, incluida la cantidad
+        /// Este Metodo recupera una lista de estadísticas de todos los usuarios, incluida la cantidad
         /// de juegos jugados y ganados, de una base de datos.
         /// </summary>
         /// <returns>
@@ -484,7 +502,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función recupera una lista de todas las Salas en una base de datos con su
+        /// Este Metodo recupera una lista de todas las Salas en una base de datos con su
         /// información respectiva.
         /// </summary>
         /// <returns>
@@ -537,6 +555,14 @@ namespace Entidades
             return lista;
         }
 
+        /// <summary>
+        /// Este Metodo recupera una lista de todos los usuarios y sus contraseñas de una base de
+        /// datos.
+        /// </summary>
+        /// <returns>
+        /// Una lista de objetos de tipo "Usuarios" que contiene los valores "nombreUsuarios" y "clave"
+        /// obtenidos de una consulta SQL.
+        /// </returns>
         public List<Usuarios> ObtenerListaUsuariosEntera()
         {
             List<Usuarios> lista = new List<Usuarios>();
@@ -580,7 +606,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Esta función selecciona y devuelve datos estadísticos para un usuario por su ID de una base
+        /// Este Metodo selecciona y devuelve datos estadísticos para un usuario por su ID de una base
         /// de datos.
         /// </summary>
         /// <param name="index">El parámetro index es un valor entero que representa el IdUsuario (ID de
@@ -628,5 +654,7 @@ namespace Entidades
 
             return item;
         }
+
+        #endregion Metodos
     }
 }

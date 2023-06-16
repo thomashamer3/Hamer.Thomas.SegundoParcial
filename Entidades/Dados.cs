@@ -4,8 +4,14 @@ namespace Entidades
 {
     public class Dados
     {
+        #region Atributos
+
         private bool estado;
         private int valorDado;
+
+        #endregion Atributos
+
+        #region Constructores
 
         public Dados()
         {
@@ -19,11 +25,19 @@ namespace Entidades
             this.estado = estado;
         }
 
+        #endregion Constructores
+
+        #region Propiedades
+
         public bool Estado { get => estado; set => estado = value; }
         public int ValorDado { get => valorDado; set => valorDado = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// Esta función devuelve una lista de cinco objetos Dados con valores iniciales de 0 y un valor
+        /// Este Metodo devuelve una lista de cinco objetos Dados con valores iniciales de 0 y un valor
         /// booleano de verdadero.
         /// </summary>
         /// <returns>
@@ -47,5 +61,7 @@ namespace Entidades
 
             return listaDados;
         }
+
+        #endregion Metodos
     }
 }

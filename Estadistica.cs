@@ -6,6 +6,8 @@ namespace Hamer.Thomas.SegundoParcial
 {
     public partial class Estadistica : Form
     {
+        #region Atributos
+
         private BaseDeDatos ado = new BaseDeDatos();
         private Estadisticas estadistica = new Estadisticas();
         private int id;
@@ -15,10 +17,18 @@ namespace Hamer.Thomas.SegundoParcial
         private Usuarios usuario = new Usuarios();
         private string usuarioIngresado;
 
+        #endregion Atributos
+
+        #region Constructor
+
         public Estadistica()
         {
             InitializeComponent();
         }
+
+        #endregion Constructor
+
+        #region Propiedades
 
         public int Id { get => id; set => id = value; }
         public double PartidasGanadas { get => partidasGanadas; set => partidasGanadas = value; }
@@ -26,8 +36,12 @@ namespace Hamer.Thomas.SegundoParcial
         public double Porcentaje { get => porcentaje; set => porcentaje = value; }
         public string UsuarioIngresado { get => usuarioIngresado; set => usuarioIngresado = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// La función cierra el formulario actual cuando se hace clic en el botón "Volver".
+        /// La Metodo cierra el formulario actual cuando se hace clic en el botón "Volver".
         /// </summary>
         /// <param name="sender">El objeto que generó el evento. En este caso, es el botón en el que se
         /// hizo clic (btnVolver).</param>
@@ -41,7 +55,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función muestra al usuario un cuadro de mensaje que le pregunta si desea cerrar el
+        /// Esta Metodo muestra al usuario un cuadro de mensaje que le pregunta si desea cerrar el
         /// programa y cancela el evento de cierre si el usuario selecciona "No".
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el formulario
@@ -72,7 +86,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función carga y muestra estadísticas de un usuario, incluido su nombre de usuario, la
+        /// Esta Metodo carga y muestra estadísticas de un usuario, incluido su nombre de usuario, la
         /// cantidad de juegos ganados y jugados y su porcentaje de ganancias.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento.</param>
@@ -93,5 +107,7 @@ namespace Hamer.Thomas.SegundoParcial
             porcentaje = (partidasGanadas / partidasJugadas) * 100;
             lblPorcentaje.Text = porcentaje.ToString() + "%";
         }
+
+        #endregion Metodos
     }
 }

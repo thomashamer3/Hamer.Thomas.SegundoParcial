@@ -11,15 +11,19 @@ namespace Hamer.Thomas.SegundoParcial
 {
     public partial class SalasPartida : Form
     {
+        #region Atributos
+
         private BaseDeDatos ado = new BaseDeDatos();
-
         private List<Salas> listAux = new List<Salas>();
-
         private List<Salas> salas = new List<Salas>();
-
         private Ordenar tipoDeSort;
-
         private Usuarios usuarioIngresado;
+
+        public delegate List<Salas> Ordenar(List<Salas> lstAux, int index);
+
+        #endregion Atributos
+
+        #region Constructor
 
         public SalasPartida()
         {
@@ -27,7 +31,9 @@ namespace Hamer.Thomas.SegundoParcial
             TipoDeSort += IndexDelSort;
         }
 
-        public delegate List<Salas> Ordenar(List<Salas> lstAux, int index);
+        #endregion Constructor
+
+        #region Propiedades
 
         public BaseDeDatos Ado { get => ado; set => ado = value; }
         public List<Salas> ListAux { get => listAux; set => listAux = value; }
@@ -35,8 +41,12 @@ namespace Hamer.Thomas.SegundoParcial
         public Ordenar TipoDeSort { get => tipoDeSort; set => tipoDeSort = value; }
         public Usuarios UsuarioIngresado { get => usuarioIngresado; set => usuarioIngresado = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// La función toma una lista de Salas y un índice, y devuelve la lista ordenada según el índice
+        /// La Metodo toma una lista de Salas y un índice, y devuelve la lista ordenada según el índice
         /// elegido.
         /// </summary>
         /// <param name="lstAux">Una lista de objetos de tipo "Salas".</param>
@@ -70,12 +80,12 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función ordena una lista de objetos "Salas" por su propiedad "Estado".
+        /// La Metodo ordena una lista de objetos "Salas" por su propiedad "Estado".
         /// </summary>
         /// <param name="lstAux">lstAux es una Lista de objetos de tipo Salas. Este método ordena la
         /// lista según la propiedad Estado de cada objeto Salas y devuelve la lista ordenada.</param>
         /// <returns>
-        /// El método `SortEstado` devuelve una lista ordenada de objetos `Salas` en función de su
+        /// El método `SortEstado` devuelve una lista ordenada de objetos `Salas` en Metodo de su
         /// propiedad `Estado`.
         /// </returns>
         private static List<Salas> SortEstado(List<Salas> lstAux)
@@ -84,10 +94,10 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función ordena una lista de objetos "Salas" por el nombre de su creador.
+        /// Esta Metodo ordena una lista de objetos "Salas" por el nombre de su creador.
         /// </summary>
         /// <param name="lstAux">lstAux es una Lista de objetos de tipo Salas que debe ordenarse en
-        /// función de la propiedad CreadorNombre de cada objeto. El método SortIDCreador toma esta
+        /// Metodo de la propiedad CreadorNombre de cada objeto. El método SortIDCreador toma esta
         /// lista como entrada y devuelve una lista ordenada basada en la propiedad
         /// CreadorNombre.</param>
         /// <returns>
@@ -100,7 +110,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función ordena una lista de objetos "Salas" por la propiedad "PuntosJ1" en orden
+        /// La Metodo ordena una lista de objetos "Salas" por la propiedad "PuntosJ1" en orden
         /// descendente.
         /// </summary>
         /// <param name="lstAux">lstAux es una Lista de objetos de tipo Salas. El método SortPtsJ1 toma
@@ -116,7 +126,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función ordena una lista de objetos "Salas" por la propiedad "PuntosJ2" en orden
+        /// La Metodo ordena una lista de objetos "Salas" por la propiedad "PuntosJ2" en orden
         /// descendente.
         /// </summary>
         /// <param name="lstAux">lstAux es una Lista de objetos de tipo Salas. El método SortPtsJ2 toma
@@ -132,7 +142,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función actualiza un DataGridView con datos de una lista de objetos Salas obtenidos de
+        /// Esta Metodo actualiza un DataGridView con datos de una lista de objetos Salas obtenidos de
         /// una base de datos, mientras muestra una pantalla de carga durante el proceso.
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el botón
@@ -161,7 +171,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función borra un DataGridView y lo llena con datos de una lista de objetos Salas
+        /// Esta Metodo borra un DataGridView y lo llena con datos de una lista de objetos Salas
         /// ordenados mediante un método de clasificación específico.
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el botón
@@ -181,7 +191,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función crea un nuevo objeto "Sala" y lo agrega a la base de datos usando el objeto
+        /// Esta Metodo crea un nuevo objeto "Sala" y lo agrega a la base de datos usando el objeto
         /// "ado".
         /// </summary>
         /// <param name="sender">El objeto que provocó el evento (en este caso, el botón en el que se
@@ -208,7 +218,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función abre un nuevo formulario para mostrar estadísticas relacionadas con un usuario.
+        /// Esta Metodo abre un nuevo formulario para mostrar estadísticas relacionadas con un usuario.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el botón en el que se
         /// hizo clic (btnEstadisticasUsuario).</param>
@@ -224,7 +234,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función borra un DataGridView y lo llena con datos de una lista de objetos Salas
+        /// Esta Metodo borra un DataGridView y lo llena con datos de una lista de objetos Salas
         /// ordenados por un criterio específico.
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el botón
@@ -244,7 +254,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función borra un DataGridView y lo llena con datos de una lista de objetos "Salas"
+        /// Esta Metodo borra un DataGridView y lo llena con datos de una lista de objetos "Salas"
         /// ordenados por un tipo específico.
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el botón
@@ -264,7 +274,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función borra un DataGridView y lo llena con datos de una lista de objetos ordenados
+        /// Esta Metodo borra un DataGridView y lo llena con datos de una lista de objetos ordenados
         /// por un tipo específico.
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el botón
@@ -284,7 +294,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función establece las propiedades de un objeto Juego en función de la fila seleccionada
+        /// Esta Metodo establece las propiedades de un objeto Juego en Metodo de la fila seleccionada
         /// en un DataGridView y muestra el objeto Juego en una ventana de diálogo.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento, en este caso, el control
@@ -308,7 +318,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función Esperar espera 3 segundos antes de continuar con la ejecución.
+        /// La Metodo Esperar espera 3 segundos antes de continuar con la ejecución.
         /// </summary>
         private void Esperar()
         {
@@ -316,7 +326,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "MostrarCarga" muestra una pantalla de carga al hacer visible un cuadro de imagen
+        /// La Metodo "MostrarCarga" muestra una pantalla de carga al hacer visible un cuadro de imagen
         /// y llenarlo al tamaño de la pantalla.
         /// </summary>
         private void MostrarCarga()
@@ -326,7 +336,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función "MostrarEnGrid" devuelve una matriz de cadenas que contienen información sobre un
+        /// La Metodo "MostrarEnGrid" devuelve una matriz de cadenas que contienen información sobre un
         /// objeto "Salas" para mostrar en una cuadrícula.
         /// </summary>
         /// <param name="Salas">Parece que "Salas" es una clase o estructura de datos que contiene
@@ -356,7 +366,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función oculta una pantalla de carga configurando el estilo de base del cuadro de imagen
+        /// La Metodo oculta una pantalla de carga configurando el estilo de base del cuadro de imagen
         /// en ninguno y su visibilidad en falso.
         /// </summary>
         private void OcultarCarga()
@@ -366,7 +376,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// La función Salas_Load establece el texto de una etiqueta y llena un DataGridView con datos
+        /// La Metodo Salas_Load establece el texto de una etiqueta y llena un DataGridView con datos
         /// de una lista de objetos Salas.
         /// </summary>
         /// <param name="sender">El objeto que generó el evento. En este caso, es la forma
@@ -386,7 +396,7 @@ namespace Hamer.Thomas.SegundoParcial
         }
 
         /// <summary>
-        /// Esta función muestra al usuario un cuadro de mensaje que le pregunta si desea cerrar el
+        /// Esta Metodo muestra al usuario un cuadro de mensaje que le pregunta si desea cerrar el
         /// programa y cancela el evento de cierre si el usuario selecciona "No".
         /// </summary>
         /// <param name="sender">El objeto que levantó el evento, en este caso, el formulario
@@ -417,5 +427,7 @@ namespace Hamer.Thomas.SegundoParcial
                 Archivos.GuardarListasEnJSON();
             }
         }
+
+        #endregion Metodos
     }
 }

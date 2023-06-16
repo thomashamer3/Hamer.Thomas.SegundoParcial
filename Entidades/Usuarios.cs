@@ -7,12 +7,18 @@ namespace Entidades
 {
     public class Usuarios
     {
+        #region Atributos
+
         private static string cadenaConexion;
         private string clave;
         private SqlCommand comando;
         private SqlConnection conexion;
         private SqlDataReader lector;
         private string nombreUsuario;
+
+        #endregion Atributos
+
+        #region Constructores
 
         static Usuarios()
         {
@@ -32,11 +38,19 @@ namespace Entidades
             this.clave = clave;
         }
 
+        #endregion Constructores
+
+        #region Propiedades
+
         public string Clave { get => clave; set => clave = value; }
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
 
+        #endregion Propiedades
+
+        #region Metodos
+
         /// <summary>
-        /// Esta función selecciona todos los usuarios de una base de datos y los devuelve como una
+        /// Este Metodo selecciona todos los usuarios de una base de datos y los devuelve como una
         /// lista de objetos Usuarios.
         /// </summary>
         /// <returns>
@@ -84,5 +98,7 @@ namespace Entidades
 
             return lista;
         }
+
+        #endregion Metodos
     }
 }

@@ -8,11 +8,21 @@ namespace Entidades
 {
     public class Archivos
     {
+        #region Atributos
+
         private static BaseDeDatos ado = new BaseDeDatos();
         private static List<Estadisticas> listaEstadisticas = new List<Estadisticas>();
         private static List<Salas> listaSalas = new List<Salas>();
         private static List<Usuarios> listaUsuarios = new List<Usuarios>();
 
+        #endregion Atributos
+
+        #region Metodos
+
+        /// <summary>
+        /// El Metodo guarda listas de estadísticas, salas y usuarios en formato JSON en sus
+        /// respectivos archivos.
+        /// </summary>
         public static void GuardarListasEnJSON()
         {
             string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.json";
@@ -32,6 +42,9 @@ namespace Entidades
             File.WriteAllText(rutaUsuarios, jsonUsuarios);
         }
 
+        /// <summary>
+        /// El Metodo guarda listas de estadísticas, salas y usuarios en archivos de texto.
+        /// </summary>
         public static void GuardarListasEnTXT()
         {
             string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.txt";
@@ -66,6 +79,10 @@ namespace Entidades
             File.WriteAllText(rutaUsuarios, sbUsuarios.ToString());
         }
 
+        /// <summary>
+        /// El Metodo guarda listas de estadísticas, salas y usuarios en formato XML en rutas de
+        /// archivo específicas.
+        /// </summary>
         public static void GuardarListasEnXML()
         {
             string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.xml";
@@ -95,7 +112,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// La función devuelve una lista de estadísticas obtenidas de una base de datos utilizando
+        /// El Metodo devuelve una lista de estadísticas obtenidas de una base de datos utilizando
         /// ADO.NET.
         /// </summary>
         /// <returns>
@@ -108,6 +125,12 @@ namespace Entidades
             return lista;
         }
 
+        /// <summary>
+        /// El Metodo devuelve una lista de todas las habitaciones obtenidas de una base de datos.
+        /// </summary>
+        /// <returns>
+        /// Una lista de objetos de tipo "Salas".
+        /// </returns>
         private static List<Salas> ConseguirListaSalas()
         {
             List<Salas> lista;
@@ -115,11 +138,20 @@ namespace Entidades
             return lista;
         }
 
+        /// <summary>
+        /// El Metodo devuelve una lista de todos los usuarios obtenidos de una base de datos usando
+        /// ADO.NET.
+        /// </summary>
+        /// <returns>
+        /// El método `GetListUsers` devuelve una `Lista` de `Usuarios`.
+        /// </returns>
         private static List<Usuarios> ConseguirListaUsuarios()
         {
             List<Usuarios> lista;
             lista = ado.ObtenerListaUsuariosEntera();
             return lista;
         }
+
+        #endregion Metodos
     }
 }
