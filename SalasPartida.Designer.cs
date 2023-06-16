@@ -166,6 +166,7 @@
             // 
             // pictureBoxPantallaDeCarga
             // 
+            this.pictureBoxPantallaDeCarga.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.cargando;
             this.pictureBoxPantallaDeCarga.Location = new System.Drawing.Point(284, 146);
             this.pictureBoxPantallaDeCarga.Name = "pictureBoxPantallaDeCarga";
             this.pictureBoxPantallaDeCarga.Size = new System.Drawing.Size(297, 243);

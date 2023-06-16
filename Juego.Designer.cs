@@ -43,11 +43,6 @@
             this.lblBloqueadoDadoTres = new System.Windows.Forms.Label();
             this.lblBloqueadoDadoDos = new System.Windows.Forms.Label();
             this.lblBloqueadoDadoUno = new System.Windows.Forms.Label();
-            this.pictureBoxCincoBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCautroBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTresBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDosBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUnoBloqueado = new System.Windows.Forms.PictureBox();
             this.lblPuntoJugador2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPuntosJugador1 = new System.Windows.Forms.Label();
@@ -63,11 +58,6 @@
             this.lblEscalera = new System.Windows.Forms.Label();
             this.lblFull = new System.Windows.Forms.Label();
             this.lblPoker = new System.Windows.Forms.Label();
-            this.pictureBoxLibre = new System.Windows.Forms.PictureBox();
-            this.pictureBoxGenerala = new System.Windows.Forms.PictureBox();
-            this.pictureBoxEscalera = new System.Windows.Forms.PictureBox();
-            this.pictureBoxFull = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPoker = new System.Windows.Forms.PictureBox();
             this.lblCantidadCinco = new System.Windows.Forms.Label();
             this.lblCantidadSeis = new System.Windows.Forms.Label();
             this.lblCantidadCuatro = new System.Windows.Forms.Label();
@@ -80,6 +70,16 @@
             this.lblTres = new System.Windows.Forms.Label();
             this.lblDos = new System.Windows.Forms.Label();
             this.lblUno = new System.Windows.Forms.Label();
+            this.pictureBoxCincoBloqueado = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCautroBloqueado = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTresBloqueado = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDosBloqueado = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUnoBloqueado = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLibre = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGenerala = new System.Windows.Forms.PictureBox();
+            this.pictureBoxEscalera = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFull = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPoker = new System.Windows.Forms.PictureBox();
             this.pictureBoxSeis = new System.Windows.Forms.PictureBox();
             this.pictureBoxCinco = new System.Windows.Forms.PictureBox();
             this.pictureBoxCuatro = new System.Windows.Forms.PictureBox();
@@ -87,12 +87,12 @@
             this.pictureBoxDos = new System.Windows.Forms.PictureBox();
             this.pictureBoxUno = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panelDeValores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCincoBloqueado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCautroBloqueado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTresBloqueado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDosBloqueado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnoBloqueado)).BeginInit();
-            this.panelDeValores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGenerala)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEscalera)).BeginInit();
@@ -291,51 +291,6 @@
             this.lblBloqueadoDadoUno.TabIndex = 39;
             this.lblBloqueadoDadoUno.Text = "!Bloqueado¡";
             // 
-            // pictureBoxCincoBloqueado
-            // 
-            this.pictureBoxCincoBloqueado.Location = new System.Drawing.Point(585, 516);
-            this.pictureBoxCincoBloqueado.Name = "pictureBoxCincoBloqueado";
-            this.pictureBoxCincoBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxCincoBloqueado.TabIndex = 38;
-            this.pictureBoxCincoBloqueado.TabStop = false;
-            this.pictureBoxCincoBloqueado.Click += new System.EventHandler(this.pictureBoxCincoBloqueado_Click);
-            // 
-            // pictureBoxCautroBloqueado
-            // 
-            this.pictureBoxCautroBloqueado.Location = new System.Drawing.Point(429, 516);
-            this.pictureBoxCautroBloqueado.Name = "pictureBoxCautroBloqueado";
-            this.pictureBoxCautroBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxCautroBloqueado.TabIndex = 37;
-            this.pictureBoxCautroBloqueado.TabStop = false;
-            this.pictureBoxCautroBloqueado.Click += new System.EventHandler(this.pictureBoxCautroBloqueado_Click);
-            // 
-            // pictureBoxTresBloqueado
-            // 
-            this.pictureBoxTresBloqueado.Location = new System.Drawing.Point(288, 516);
-            this.pictureBoxTresBloqueado.Name = "pictureBoxTresBloqueado";
-            this.pictureBoxTresBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxTresBloqueado.TabIndex = 36;
-            this.pictureBoxTresBloqueado.TabStop = false;
-            this.pictureBoxTresBloqueado.Click += new System.EventHandler(this.pictureBoxTresBloqueado_Click);
-            // 
-            // pictureBoxDosBloqueado
-            // 
-            this.pictureBoxDosBloqueado.Location = new System.Drawing.Point(148, 516);
-            this.pictureBoxDosBloqueado.Name = "pictureBoxDosBloqueado";
-            this.pictureBoxDosBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxDosBloqueado.TabIndex = 35;
-            this.pictureBoxDosBloqueado.TabStop = false;
-            this.pictureBoxDosBloqueado.Click += new System.EventHandler(this.pictureBoxDosBloqueado_Click);
-            // 
-            // pictureBoxUnoBloqueado
-            // 
-            this.pictureBoxUnoBloqueado.Location = new System.Drawing.Point(17, 516);
-            this.pictureBoxUnoBloqueado.Name = "pictureBoxUnoBloqueado";
-            this.pictureBoxUnoBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxUnoBloqueado.TabIndex = 34;
-            this.pictureBoxUnoBloqueado.TabStop = false;
-            this.pictureBoxUnoBloqueado.Click += new System.EventHandler(this.pictureBoxUnoBloqueado_Click);
-            // 
             // lblPuntoJugador2
             // 
             this.lblPuntoJugador2.AutoSize = true;
@@ -518,61 +473,6 @@
             this.lblPoker.TabIndex = 23;
             this.lblPoker.Text = "Poker";
             // 
-            // pictureBoxLibre
-            // 
-            this.pictureBoxLibre.InitialImage = null;
-            this.pictureBoxLibre.Location = new System.Drawing.Point(159, 295);
-            this.pictureBoxLibre.Name = "pictureBoxLibre";
-            this.pictureBoxLibre.Size = new System.Drawing.Size(94, 50);
-            this.pictureBoxLibre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLibre.TabIndex = 22;
-            this.pictureBoxLibre.TabStop = false;
-            this.pictureBoxLibre.Click += new System.EventHandler(this.pictureBoxLibre_Click);
-            // 
-            // pictureBoxGenerala
-            // 
-            this.pictureBoxGenerala.InitialImage = null;
-            this.pictureBoxGenerala.Location = new System.Drawing.Point(159, 218);
-            this.pictureBoxGenerala.Name = "pictureBoxGenerala";
-            this.pictureBoxGenerala.Size = new System.Drawing.Size(94, 50);
-            this.pictureBoxGenerala.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxGenerala.TabIndex = 21;
-            this.pictureBoxGenerala.TabStop = false;
-            this.pictureBoxGenerala.Click += new System.EventHandler(this.pictureBoxGenerala_Click);
-            // 
-            // pictureBoxEscalera
-            // 
-            this.pictureBoxEscalera.InitialImage = null;
-            this.pictureBoxEscalera.Location = new System.Drawing.Point(159, 141);
-            this.pictureBoxEscalera.Name = "pictureBoxEscalera";
-            this.pictureBoxEscalera.Size = new System.Drawing.Size(94, 50);
-            this.pictureBoxEscalera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxEscalera.TabIndex = 20;
-            this.pictureBoxEscalera.TabStop = false;
-            this.pictureBoxEscalera.Click += new System.EventHandler(this.pictureBoxEscalera_Click);
-            // 
-            // pictureBoxFull
-            // 
-            this.pictureBoxFull.InitialImage = null;
-            this.pictureBoxFull.Location = new System.Drawing.Point(159, 72);
-            this.pictureBoxFull.Name = "pictureBoxFull";
-            this.pictureBoxFull.Size = new System.Drawing.Size(94, 50);
-            this.pictureBoxFull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFull.TabIndex = 19;
-            this.pictureBoxFull.TabStop = false;
-            this.pictureBoxFull.Click += new System.EventHandler(this.pictureBoxFull_Click);
-            // 
-            // pictureBoxPoker
-            // 
-            this.pictureBoxPoker.InitialImage = null;
-            this.pictureBoxPoker.Location = new System.Drawing.Point(159, 0);
-            this.pictureBoxPoker.Name = "pictureBoxPoker";
-            this.pictureBoxPoker.Size = new System.Drawing.Size(94, 50);
-            this.pictureBoxPoker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPoker.TabIndex = 18;
-            this.pictureBoxPoker.TabStop = false;
-            this.pictureBoxPoker.Click += new System.EventHandler(this.pictureBoxPoker_Click);
-            // 
             // lblCantidadCinco
             // 
             this.lblCantidadCinco.AutoSize = true;
@@ -705,8 +605,114 @@
             this.lblUno.TabIndex = 6;
             this.lblUno.Text = "Uno";
             // 
+            // pictureBoxCincoBloqueado
+            // 
+            this.pictureBoxCincoBloqueado.Location = new System.Drawing.Point(585, 516);
+            this.pictureBoxCincoBloqueado.Name = "pictureBoxCincoBloqueado";
+            this.pictureBoxCincoBloqueado.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxCincoBloqueado.TabIndex = 38;
+            this.pictureBoxCincoBloqueado.TabStop = false;
+            this.pictureBoxCincoBloqueado.Click += new System.EventHandler(this.pictureBoxCincoBloqueado_Click);
+            // 
+            // pictureBoxCautroBloqueado
+            // 
+            this.pictureBoxCautroBloqueado.Location = new System.Drawing.Point(429, 516);
+            this.pictureBoxCautroBloqueado.Name = "pictureBoxCautroBloqueado";
+            this.pictureBoxCautroBloqueado.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxCautroBloqueado.TabIndex = 37;
+            this.pictureBoxCautroBloqueado.TabStop = false;
+            this.pictureBoxCautroBloqueado.Click += new System.EventHandler(this.pictureBoxCautroBloqueado_Click);
+            // 
+            // pictureBoxTresBloqueado
+            // 
+            this.pictureBoxTresBloqueado.Location = new System.Drawing.Point(288, 516);
+            this.pictureBoxTresBloqueado.Name = "pictureBoxTresBloqueado";
+            this.pictureBoxTresBloqueado.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxTresBloqueado.TabIndex = 36;
+            this.pictureBoxTresBloqueado.TabStop = false;
+            this.pictureBoxTresBloqueado.Click += new System.EventHandler(this.pictureBoxTresBloqueado_Click);
+            // 
+            // pictureBoxDosBloqueado
+            // 
+            this.pictureBoxDosBloqueado.Location = new System.Drawing.Point(148, 516);
+            this.pictureBoxDosBloqueado.Name = "pictureBoxDosBloqueado";
+            this.pictureBoxDosBloqueado.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxDosBloqueado.TabIndex = 35;
+            this.pictureBoxDosBloqueado.TabStop = false;
+            this.pictureBoxDosBloqueado.Click += new System.EventHandler(this.pictureBoxDosBloqueado_Click);
+            // 
+            // pictureBoxUnoBloqueado
+            // 
+            this.pictureBoxUnoBloqueado.Location = new System.Drawing.Point(17, 516);
+            this.pictureBoxUnoBloqueado.Name = "pictureBoxUnoBloqueado";
+            this.pictureBoxUnoBloqueado.Size = new System.Drawing.Size(75, 75);
+            this.pictureBoxUnoBloqueado.TabIndex = 34;
+            this.pictureBoxUnoBloqueado.TabStop = false;
+            this.pictureBoxUnoBloqueado.Click += new System.EventHandler(this.pictureBoxUnoBloqueado_Click);
+            // 
+            // pictureBoxLibre
+            // 
+            this.pictureBoxLibre.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Libre;
+            this.pictureBoxLibre.InitialImage = null;
+            this.pictureBoxLibre.Location = new System.Drawing.Point(159, 295);
+            this.pictureBoxLibre.Name = "pictureBoxLibre";
+            this.pictureBoxLibre.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxLibre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLibre.TabIndex = 22;
+            this.pictureBoxLibre.TabStop = false;
+            this.pictureBoxLibre.Click += new System.EventHandler(this.pictureBoxLibre_Click);
+            // 
+            // pictureBoxGenerala
+            // 
+            this.pictureBoxGenerala.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Generala;
+            this.pictureBoxGenerala.InitialImage = null;
+            this.pictureBoxGenerala.Location = new System.Drawing.Point(159, 218);
+            this.pictureBoxGenerala.Name = "pictureBoxGenerala";
+            this.pictureBoxGenerala.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxGenerala.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGenerala.TabIndex = 21;
+            this.pictureBoxGenerala.TabStop = false;
+            this.pictureBoxGenerala.Click += new System.EventHandler(this.pictureBoxGenerala_Click);
+            // 
+            // pictureBoxEscalera
+            // 
+            this.pictureBoxEscalera.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Escalera;
+            this.pictureBoxEscalera.InitialImage = null;
+            this.pictureBoxEscalera.Location = new System.Drawing.Point(159, 141);
+            this.pictureBoxEscalera.Name = "pictureBoxEscalera";
+            this.pictureBoxEscalera.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxEscalera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxEscalera.TabIndex = 20;
+            this.pictureBoxEscalera.TabStop = false;
+            this.pictureBoxEscalera.Click += new System.EventHandler(this.pictureBoxEscalera_Click);
+            // 
+            // pictureBoxFull
+            // 
+            this.pictureBoxFull.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Full;
+            this.pictureBoxFull.InitialImage = null;
+            this.pictureBoxFull.Location = new System.Drawing.Point(159, 72);
+            this.pictureBoxFull.Name = "pictureBoxFull";
+            this.pictureBoxFull.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxFull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFull.TabIndex = 19;
+            this.pictureBoxFull.TabStop = false;
+            this.pictureBoxFull.Click += new System.EventHandler(this.pictureBoxFull_Click);
+            // 
+            // pictureBoxPoker
+            // 
+            this.pictureBoxPoker.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Poker;
+            this.pictureBoxPoker.InitialImage = null;
+            this.pictureBoxPoker.Location = new System.Drawing.Point(159, 0);
+            this.pictureBoxPoker.Name = "pictureBoxPoker";
+            this.pictureBoxPoker.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxPoker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPoker.TabIndex = 18;
+            this.pictureBoxPoker.TabStop = false;
+            this.pictureBoxPoker.Click += new System.EventHandler(this.pictureBoxPoker_Click);
+            // 
             // pictureBoxSeis
             // 
+            this.pictureBoxSeis.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado6;
             this.pictureBoxSeis.InitialImage = null;
             this.pictureBoxSeis.Location = new System.Drawing.Point(13, 396);
             this.pictureBoxSeis.Name = "pictureBoxSeis";
@@ -718,6 +724,7 @@
             // 
             // pictureBoxCinco
             // 
+            this.pictureBoxCinco.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado5;
             this.pictureBoxCinco.InitialImage = null;
             this.pictureBoxCinco.Location = new System.Drawing.Point(13, 323);
             this.pictureBoxCinco.Name = "pictureBoxCinco";
@@ -729,6 +736,7 @@
             // 
             // pictureBoxCuatro
             // 
+            this.pictureBoxCuatro.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado4;
             this.pictureBoxCuatro.InitialImage = null;
             this.pictureBoxCuatro.Location = new System.Drawing.Point(13, 246);
             this.pictureBoxCuatro.Name = "pictureBoxCuatro";
@@ -740,6 +748,7 @@
             // 
             // pictureBoxTres
             // 
+            this.pictureBoxTres.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado3;
             this.pictureBoxTres.InitialImage = null;
             this.pictureBoxTres.Location = new System.Drawing.Point(13, 169);
             this.pictureBoxTres.Name = "pictureBoxTres";
@@ -751,6 +760,7 @@
             // 
             // pictureBoxDos
             // 
+            this.pictureBoxDos.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado2;
             this.pictureBoxDos.InitialImage = null;
             this.pictureBoxDos.Location = new System.Drawing.Point(12, 100);
             this.pictureBoxDos.Name = "pictureBoxDos";
@@ -762,6 +772,7 @@
             // 
             // pictureBoxUno
             // 
+            this.pictureBoxUno.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado1;
             this.pictureBoxUno.InitialImage = null;
             this.pictureBoxUno.Location = new System.Drawing.Point(12, 28);
             this.pictureBoxUno.Name = "pictureBoxUno";
@@ -785,13 +796,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Juego_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelDeValores.ResumeLayout(false);
+            this.panelDeValores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCincoBloqueado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCautroBloqueado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTresBloqueado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDosBloqueado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnoBloqueado)).EndInit();
-            this.panelDeValores.ResumeLayout(false);
-            this.panelDeValores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGenerala)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEscalera)).EndInit();

@@ -11,7 +11,6 @@ namespace Hamer.Thomas.SegundoParcial
 
         private BaseDeDatos ado = new BaseDeDatos();
         private bool poderCerrar = false;
-        private string usuarioIngresado;
 
         #endregion Atributos
 
