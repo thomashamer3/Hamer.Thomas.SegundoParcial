@@ -1090,7 +1090,7 @@ namespace Hamer.Thomas.SegundoParcial
         /// <param name="PictureBox">Un control en Windows Forms que muestra una imagen.</param>
         /// <param name="index">El parámetro índice es un número entero que representa el índice de los
         /// dados en la lista de Listadados que se está tirando.</param>
-        private void TiradaDeDados(PictureBox dado, int index)
+        public void TiradaDeDados(PictureBox dado, int index)
         {
             if (Listadados[index].Estado == true)
             {

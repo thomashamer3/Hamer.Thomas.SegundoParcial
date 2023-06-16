@@ -155,13 +155,15 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Estadistica (PartidasJugadas, PartidasGanadas) VALUES (@PartidasJugadas, @PartidasGanadas)";
+                string sql = "INSERT INTO Estadistica (PartidasJugadas, PartidasGanadas) VALUES(";
+                sql = sql + estadistica.PartidasJugadas + "," + estadistica.PartidasGanadas + ")";
 
-                SqlCommand comando = new SqlCommand(sql, conexion);
-                comando.Parameters.AddWithValue("@PartidasJugadas", estadistica.PartidasJugadas);
-                comando.Parameters.AddWithValue("@PartidasGanadas", estadistica.PartidasGanadas);
+                this.comando = new SqlCommand();
+                this.comando.CommandType = CommandType.Text;
+                this.comando.CommandText = sql;
+                this.comando.Connection = this.conexion;
 
-                conexion.Open();
+                this.conexion.Open();
 
                 int filasAfectadas = this.comando.ExecuteNonQuery();
 
@@ -295,53 +297,6 @@ namespace Entidades
             }
 
             return rta;
-        }
-
-        /// <summary>
-        /// Este Metodo recupera estadísticas de un usuario por su ID de una base de datos.
-        /// </summary>
-        /// <param name="index">El parámetro de índice es un valor entero que representa el IdUsuario
-        /// (ID de usuario) para el que se recuperan las estadísticas de la base de datos.</param>
-        /// <returns>
-        /// Un objeto de tipo Estadísticas.
-        /// </returns>
-        public Estadisticas ObtenerEstadisticaPorId(int index)
-        {
-            Estadisticas item = new Estadisticas();
-
-            try
-            {
-                this.comando = new SqlCommand();
-
-                this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT * FROM Estadistica WHERE IdUsuario = " + index;
-                this.comando.Connection = this.conexion;
-
-                this.conexion.Open();
-
-                this.lector = comando.ExecuteReader();
-
-                while (lector.Read())
-                {
-                    item.PartidasJugadas = lector.GetInt32(1);
-                    item.PartidasGanadas = lector.GetInt32(2);
-                }
-
-                lector.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-            finally
-            {
-                if (this.conexion.State == ConnectionState.Open)
-                {
-                    this.conexion.Close();
-                }
-            }
-
-            return item;
         }
 
         /// <summary>

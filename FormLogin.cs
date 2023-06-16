@@ -53,6 +53,7 @@ namespace Hamer.Thomas.SegundoParcial
                 else
                 {
                     MessageBox.Show("Clave o Usuario Incorrectos.", "Error.");
+                    break;
                 }
             }
         }
@@ -69,27 +70,14 @@ namespace Hamer.Thomas.SegundoParcial
         private void btn_Registrarse_Click(object sender, EventArgs e)
         {
             Usuarios newUser = new Usuarios();
-            List<Usuarios> lista = newUser.Selecionar();
-
             newUser.NombreUsuario = txtUsuario.Text;
             newUser.Clave = txtClave.Text;
 
-            foreach (Usuarios item in lista)
-            {
-                if (item.NombreUsuario == txtUsuario.Text && item.Clave == txtClave.Text)
-                {
-                    MessageBox.Show("Usuario Ya Esta Registrado, Ingrese Otro.", "Error.");
-                }
-                else
-                {
-                    Estadisticas newEstadistica = new Estadisticas();
-
-                    newEstadistica.NombreUsuario = txtUsuario.Text;
-                    ado.AgregarEstadistica(newEstadistica);
-                    ado.AgregarDato(newUser);
-                    this.lblUsuarioRegistrado.Visible = true;
-                }
-            }
+            Estadisticas newEstadistica = new Estadisticas();
+            newEstadistica.NombreUsuario = txtUsuario.Text;
+            ado.AgregarEstadistica(newEstadistica);
+            ado.AgregarDato(newUser);
+            this.lblUsuarioRegistrado.Visible = true;
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -25,9 +26,10 @@ namespace Entidades
         /// </summary>
         public static void GuardarListasEnJSON()
         {
-            string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.json";
-            string rutaSalas = "..\\..\\..\\..\\Archivos\\Salas.json";
-            string rutaUsuarios = "..\\..\\..\\..\\Archivos\\Usuarios.json";
+            string folderPath = AppDomain.CurrentDomain.BaseDirectory;
+            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.json");
+            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.json");
+            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.json");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             string jsonEstadisticas = JsonConvert.SerializeObject(listaEstadisticas);
@@ -47,9 +49,10 @@ namespace Entidades
         /// </summary>
         public static void GuardarListasEnTXT()
         {
-            string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.txt";
-            string rutaSalas = "..\\..\\..\\..\\Archivos\\Salas.txt";
-            string rutaUsuarios = "..\\..\\..\\..\\Archivos\\Usuarios.txt";
+            string folderPath = AppDomain.CurrentDomain.BaseDirectory;
+            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.txt");
+            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.txt");
+            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.txt");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             StringBuilder sbEstadisticas = new StringBuilder();
@@ -85,9 +88,10 @@ namespace Entidades
         /// </summary>
         public static void GuardarListasEnXML()
         {
-            string rutaEstadisticas = "..\\..\\..\\..\\Archivos\\Estadisticas.xml";
-            string rutaSalas = "..\\..\\..\\..\\Archivos\\Salas.xml";
-            string rutaUsuarios = "..\\..\\..\\..\\Archivos\\Usuarios.xml";
+            string folderPath = AppDomain.CurrentDomain.BaseDirectory;
+            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.xml");
+            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.xml");
+            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.xml");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             XmlSerializer serializerEstadisticas = new XmlSerializer(typeof(List<Estadisticas>));

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamer.Thomas.SegundoParcial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{FAE3C36B-15A3-425D-8896-AF668976FC77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testeo", "Testeo\Testeo.csproj", "{6A5E021F-C24F-4454-913A-B8D2266EA3D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FAE3C36B-15A3-425D-8896-AF668976FC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE3C36B-15A3-425D-8896-AF668976FC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE3C36B-15A3-425D-8896-AF668976FC77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5E021F-C24F-4454-913A-B8D2266EA3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5E021F-C24F-4454-913A-B8D2266EA3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5E021F-C24F-4454-913A-B8D2266EA3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5E021F-C24F-4454-913A-B8D2266EA3D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

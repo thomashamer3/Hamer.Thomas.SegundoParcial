@@ -173,6 +173,7 @@
             this.pictureBoxPantallaDeCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxPantallaDeCarga.TabIndex = 4;
             this.pictureBoxPantallaDeCarga.TabStop = false;
+            this.pictureBoxPantallaDeCarga.Visible = false;
             // 
             // lblSalas
             // 

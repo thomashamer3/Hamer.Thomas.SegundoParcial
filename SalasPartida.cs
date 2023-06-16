@@ -17,7 +17,7 @@ namespace Hamer.Thomas.SegundoParcial
         private List<Salas> listAux = new List<Salas>();
         private List<Salas> salas = new List<Salas>();
         private Ordenar tipoDeSort;
-        private Usuarios usuarioIngresado;
+        public Usuarios usuarioIngresado;
 
         public delegate List<Salas> Ordenar(List<Salas> lstAux, int index);
 
