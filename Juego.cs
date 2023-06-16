@@ -61,6 +61,49 @@ namespace Hamer.Thomas.SegundoParcial
         #region Metodos
 
         /// <summary>
+        /// Esta Metodo lanza un dado y muestra la imagen correspondiente en un cuadro de imagen.
+        /// </summary>
+        /// <param name="PictureBox">Un control en Windows Forms que muestra una imagen.</param>
+        /// <param name="index">El parámetro índice es un número entero que representa el índice de los
+        /// dados en la lista de Listadados que se está tirando.</param>
+        public void TiradaDeDados(PictureBox dado, int index)
+        {
+            if (Listadados[index].Estado == true)
+            {
+                Random rnd = new Random();
+                int tirada = rnd.Next(1, 7);
+                Listadados[index].ValorDado = tirada;
+
+                switch (tirada)
+                {
+                    case 1:
+                        dado.Image = Image.FromFile("dado1.png");
+                        break;
+
+                    case 2:
+                        dado.Image = Image.FromFile("dado2.png");
+                        break;
+
+                    case 3:
+                        dado.Image = Image.FromFile("dado3.png");
+                        break;
+
+                    case 4:
+                        dado.Image = Image.FromFile("dado4.png");
+                        break;
+
+                    case 5:
+                        dado.Image = Image.FromFile("dado5.png");
+                        break;
+
+                    case 6:
+                        dado.Image = Image.FromFile("dado6.png");
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
         /// La Metodo ActivarPB habilita todos los cuadros de imagen en un programa C#.
         /// </summary>
         private void ActivarPB()
@@ -1081,49 +1124,6 @@ namespace Hamer.Thomas.SegundoParcial
             else
             {
                 RevisarTachados(TachadosJ2);
-            }
-        }
-
-        /// <summary>
-        /// Esta Metodo lanza un dado y muestra la imagen correspondiente en un cuadro de imagen.
-        /// </summary>
-        /// <param name="PictureBox">Un control en Windows Forms que muestra una imagen.</param>
-        /// <param name="index">El parámetro índice es un número entero que representa el índice de los
-        /// dados en la lista de Listadados que se está tirando.</param>
-        public void TiradaDeDados(PictureBox dado, int index)
-        {
-            if (Listadados[index].Estado == true)
-            {
-                Random rnd = new Random();
-                int tirada = rnd.Next(1, 7);
-                Listadados[index].ValorDado = tirada;
-
-                switch (tirada)
-                {
-                    case 1:
-                        dado.Image = Image.FromFile("dado1.png");
-                        break;
-
-                    case 2:
-                        dado.Image = Image.FromFile("dado2.png");
-                        break;
-
-                    case 3:
-                        dado.Image = Image.FromFile("dado3.png");
-                        break;
-
-                    case 4:
-                        dado.Image = Image.FromFile("dado4.png");
-                        break;
-
-                    case 5:
-                        dado.Image = Image.FromFile("dado5.png");
-                        break;
-
-                    case 6:
-                        dado.Image = Image.FromFile("dado6.png");
-                        break;
-                }
             }
         }
 

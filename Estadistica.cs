@@ -101,7 +101,7 @@ namespace Hamer.Thomas.SegundoParcial
             estadistica = ado.SelectById(id);
             partidasGanadas = estadistica.PartidasGanadas;
             partidasJugadas = estadistica.PartidasJugadas;
-            lblNombreUsuario.Text = UsuarioIngresado;
+            lblNombreUsuario.Text = usuarioIngresado;
             lblCantidadDePartidasGanadas.Text = partidasGanadas.ToString();
             lblCantidadDePartidasJugadas.Text = partidasJugadas.ToString();
             porcentaje = (partidasGanadas / partidasJugadas) * 100;

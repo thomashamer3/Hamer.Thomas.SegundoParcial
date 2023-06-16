@@ -88,3 +88,4 @@ C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Enti
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Entidades.pdb
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\bin\Debug\Entidades.dll.config
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.SalasPartida.resources
+C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\obj\Debug\Hamer.Thomas.SegundoParcial.Registro.resources

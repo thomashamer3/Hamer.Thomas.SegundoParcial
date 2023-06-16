@@ -13,11 +13,11 @@ namespace Hamer.Thomas.SegundoParcial
     {
         #region Atributos
 
+        public Usuarios usuarioIngresado;
         private BaseDeDatos ado = new BaseDeDatos();
         private List<Salas> listAux = new List<Salas>();
         private List<Salas> salas = new List<Salas>();
         private Ordenar tipoDeSort;
-        public Usuarios usuarioIngresado;
 
         public delegate List<Salas> Ordenar(List<Salas> lstAux, int index);
 

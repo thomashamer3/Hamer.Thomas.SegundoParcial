@@ -73,7 +73,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT b.nombreUsuarioS,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
+                this.comando.CommandText = "SELECT b.nombreUsuario,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();

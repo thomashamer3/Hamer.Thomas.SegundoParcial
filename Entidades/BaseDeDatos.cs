@@ -49,7 +49,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = $"SELECT * FROM Usuarios WHERE nombreUsuarios='{usuario.NombreUsuario}'";
+                this.comando.CommandText = $"SELECT * FROM Usuarios WHERE nombreUsuario='{usuario.NombreUsuario}'";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -59,7 +59,7 @@ namespace Entidades
                 {
                     this.lector.Close();
 
-                    string SQL = "INSERT INTO Usuarios (nombreUsuarios, clave) VALUES(";
+                    string SQL = "INSERT INTO Usuarios (nombreUsuario, clave) VALUES(";
                     SQL = SQL + "'" + usuario.NombreUsuario + "','" + usuario.Clave + "')";
 
                     this.comando.CommandText = SQL;
@@ -104,7 +104,7 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Salas (CreadoId,EstadoSala,PuntosJ1,PuntosJ2,TurnosRestantes,TiempoDePartida) VALUES(";
+                string sql = "INSERT INTO Salas (CreadorID,EstadoSala,PuntosJ1,PuntosJ2,TurnosRestantes,TiempoDePartida) VALUES(";
                 sql = sql + "'" + sala.Creador + "','" + sala.Estado + "'," + sala.PuntosJ1.ToString() + "," + sala.PuntosJ2.ToString() + "," + sala.TurnosRestantes1 +
                     ",'" + sala.TiempoDePartida1 + "')";
 
@@ -225,7 +225,7 @@ namespace Entidades
                     rta = false;
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 rta = false;
             }
@@ -259,7 +259,7 @@ namespace Entidades
             {
                 this.comando = new SqlCommand();
 
-                this.comando.Parameters.AddWithValue("@CreadorId", param.Creador);
+                this.comando.Parameters.AddWithValue("@CreadorID", param.Creador);
                 this.comando.Parameters.AddWithValue("@EstadoSala", param.Estado);
                 this.comando.Parameters.AddWithValue("@PuntosJ1", param.PuntosJ1);
                 this.comando.Parameters.AddWithValue("@PuntosJ2", param.PuntosJ2);
@@ -268,7 +268,7 @@ namespace Entidades
                 this.comando.Parameters.AddWithValue("@ID", param.IDSala);
 
                 string sql = "UPDATE Salas ";
-                sql += "SET CreadorId = @CreadorId, EstadoSala = @EstadoSala, PuntosJ1 = @PuntosJ1, PuntosJ2 = @PuntosJ2, TurnosRestantes = @TurnosRestantes, TiempoDePartida = @TiempoDePartida ";
+                sql += "SET CreadorID = @CreadorID, EstadoSala = @EstadoSala, PuntosJ1 = @PuntosJ1, PuntosJ2 = @PuntosJ2, TurnosRestantes = @TurnosRestantes, TiempoDePartida = @TiempoDePartida ";
                 sql += "WHERE ID = @ID";
 
                 this.comando.CommandType = CommandType.Text;
@@ -318,7 +318,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT id FROM Usuarios WHERE nombreUsuarios = '" + usuario.NombreUsuario + "'";
+                this.comando.CommandText = "SELECT ID FROM Usuarios WHERE nombreUsuario = '" + usuario.NombreUsuario + "'";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -363,7 +363,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT b.nombreUsuarios,a.EstadoSala,a.PuntosJ1,a.PuntosJ2,a.TurnosRestantes,a.TiempoDePartida,a.Id,a.CreadorId FROM Salas a left join Usuarios b on b.id=a.CreadorId";
+                this.comando.CommandText = "SELECT b.nombreUsuario,a.EstadoSala,a.PuntosJ1,a.PuntosJ2,a.TurnosRestantes,a.TiempoDePartida,a.ID,a.CreadorID FROM Salas a left join Usuarios b on b.id=a.CreadorID";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -420,7 +420,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT b.nombreUsuarios,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
+                this.comando.CommandText = "SELECT b.nombreUsuario,a.PartidasJugadas,a.PartidasGanadas,b.id FROM Estadistica a left join Usuarios b on b.id=a.IdUsuario";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -471,7 +471,7 @@ namespace Entidades
             {
                 this.comando = new SqlCommand();
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT CreadorId, EstadoSala, PuntosJ1, PuntosJ2, TurnosRestantes, TiempoDePartida, ID FROM Salas";
+                this.comando.CommandText = "SELECT CreadorID, EstadoSala, PuntosJ1, PuntosJ2, TurnosRestantes, TiempoDePartida, ID FROM Salas";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
