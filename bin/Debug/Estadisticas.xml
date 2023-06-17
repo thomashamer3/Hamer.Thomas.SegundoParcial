@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfEstadisticas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Estadisticas>
+    <nombreUsuario>thomas</nombreUsuario>
+    <Id>1</Id>
+    <NombreUsuario>thomas</NombreUsuario>
+    <PartidasGanadas>2</PartidasGanadas>
+    <PartidasJugadas>3</PartidasJugadas>
+  </Estadisticas>
+  <Estadisticas>
+    <nombreUsuario>juan</nombreUsuario>
+    <Id>2</Id>
+    <NombreUsuario>juan</NombreUsuario>
+    <PartidasGanadas>1</PartidasGanadas>
+    <PartidasJugadas>3</PartidasJugadas>
+  </Estadisticas>
+  <Estadisticas>
+    <nombreUsuario>Messi</nombreUsuario>
+    <Id>3</Id>
+    <NombreUsuario>Messi</NombreUsuario>
+    <PartidasGanadas>1</PartidasGanadas>
+    <PartidasJugadas>5</PartidasJugadas>
+  </Estadisticas>
+</ArrayOfEstadisticas>

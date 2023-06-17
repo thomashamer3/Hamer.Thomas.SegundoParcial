@@ -71,6 +71,21 @@ namespace Entidades
                         rta = true;
                     }
                 }
+                else
+                {
+                    this.lector.Close();
+
+                    string SQL = "UPDATE Usuarios SET clave = '" + usuario.Clave + "' WHERE nombreUsuario = '" + usuario.NombreUsuario + "'";
+
+                    this.comando.CommandText = SQL;
+
+                    int filasAfectadas = this.comando.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    {
+                        rta = true;
+                    }
+                }
 
                 lector.Close();
             }
@@ -155,10 +170,11 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Estadistica (PartidasJugadas, PartidasGanadas) VALUES(";
+                string sql = "INSERT INTO Estadistica (PartidasJugadas,PartidasGanadas,PorcentajeGanadas) VALUES(";
                 sql = sql + estadistica.PartidasJugadas + "," + estadistica.PartidasGanadas + ")";
 
                 this.comando = new SqlCommand();
+
                 this.comando.CommandType = CommandType.Text;
                 this.comando.CommandText = sql;
                 this.comando.Connection = this.conexion;
@@ -526,7 +542,7 @@ namespace Entidades
             {
                 this.comando = new SqlCommand();
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT nombreUsuarios, clave FROM Usuarios";
+                this.comando.CommandText = "SELECT nombreUsuario, clave FROM Usuarios";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();
@@ -558,6 +574,29 @@ namespace Entidades
             }
 
             return lista;
+        }
+
+        public bool ProbarConexion()
+        {
+            bool rta = true;
+
+            try
+            {
+                this.conexion.Open();
+            }
+            catch (Exception)
+            {
+                rta = false;
+            }
+            finally
+            {
+                if (this.conexion.State == ConnectionState.Open)
+                {
+                    this.conexion.Close();
+                }
+            }
+
+            return rta;
         }
 
         /// <summary>

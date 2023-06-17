@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hamer.Thomas.SegundoParcial
@@ -61,6 +63,66 @@ namespace Hamer.Thomas.SegundoParcial
         #region Metodos
 
         /// <summary>
+        /// Esta función actualiza una etiqueta con la hora actual cada segundo.
+        /// </summary>
+        public void AsignarHora()
+        {
+            string tiempoAhora = tiempo.ToString();
+
+            if (lblTiempo.InvokeRequired)
+            {
+                Action d = new Action(AsignarHora);
+                lblTiempo.Invoke(d);
+            }
+            else
+            {
+                tiempo = tiempo.AddSeconds(1);
+                lblTiempo.Text = tiempo.AddSeconds(1).ToString("H:mm:ss");
+            }
+        }
+
+        /// <summary>
+        /// La función actualiza continuamente la hora cada segundo.
+        /// </summary>
+        public void CambiarHora()
+        {
+            while (true)
+            {
+                Thread.Sleep(1000);
+                AsignarHora();
+            }
+        }
+
+        /// <summary>
+        /// La función determina el turno de qué jugador es en función del recuento de turnos actual.
+        /// </summary>
+        public void ConsultarTurno()
+        {
+            if (contadorTurnos % 2 == 0)
+            {
+                turnoJugador = 1;
+                lblTurnoJugador.Text = "Turno de jugador: 1";
+            }
+            else
+            {
+                turnoJugador = 2;
+                lblTurnoJugador.Text = "Turno de jugador: 2";
+            }
+        }
+
+        /// <summary>
+        /// La función desactiva dos botones si el estado de la sala de juegos es "Finalizada".
+        /// </summary>
+        public void RevisarEstadoDePartida()
+        {
+            if (EstadoSala == "Finalizada")
+            {
+                btnConfirmar.Enabled = false;
+                btnTirar.Enabled = false;
+            }
+        }
+
+        /// <summary>
         /// Esta Metodo lanza un dado y muestra la imagen correspondiente en un cuadro de imagen.
         /// </summary>
         /// <param name="PictureBox">Un control en Windows Forms que muestra una imagen.</param>
@@ -77,27 +139,27 @@ namespace Hamer.Thomas.SegundoParcial
                 switch (tirada)
                 {
                     case 1:
-                        dado.Image = Image.FromFile("dado1.png");
+                        dado.Image = Properties.Resources.dado1;
                         break;
 
                     case 2:
-                        dado.Image = Image.FromFile("dado2.png");
+                        dado.Image = Properties.Resources.dado2;
                         break;
 
                     case 3:
-                        dado.Image = Image.FromFile("dado3.png");
+                        dado.Image = Properties.Resources.dado3;
                         break;
 
                     case 4:
-                        dado.Image = Image.FromFile("dado4.png");
+                        dado.Image = Properties.Resources.dado4;
                         break;
 
                     case 5:
-                        dado.Image = Image.FromFile("dado5.png");
+                        dado.Image = Properties.Resources.dado5;
                         break;
 
                     case 6:
-                        dado.Image = Image.FromFile("dado6.png");
+                        dado.Image = Properties.Resources.dado6;
                         break;
                 }
             }
@@ -568,6 +630,27 @@ namespace Hamer.Thomas.SegundoParcial
                     Archivos.GuardarListasEnJSON();
                 }
             }
+        }
+
+        /// <summary>
+        /// La función carga el juego e inicializa varias variables y tareas.
+        /// </summary>
+        /// <param name="sender">El objeto que generó el evento. En este caso, es la forma
+        /// Juego.</param>
+        /// <param name="EventArgs">EventArgs es una clase en C# que proporciona datos para un evento.
+        /// Se utiliza para pasar información sobre un evento a un controlador de eventos. No contiene
+        /// datos, pero se usa como clase base para las clases que contienen datos. Se usa comúnmente
+        /// como un parámetro para los controladores de eventos.</param>
+        private async void Juego_Load(object sender, EventArgs e)
+        {
+            RevisarEstadoDePartida();
+            lblPuntosJugador1.Text = J1Puntos.ToString();
+            lblPuntoJugador2.Text = J2Puntos.ToString();
+            lblRestantesCantidad.Text = contadorTurnos.ToString();
+            tiempo = Convert.ToDateTime(TiempoDePartida);
+            ConsultarTurno();
+            Task t = new Task(CambiarHora);
+            t.Start();
         }
 
         /// <summary>

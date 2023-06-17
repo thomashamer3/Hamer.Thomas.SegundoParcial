@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSalas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Salas>
+    <Creador>1</Creador>
+    <Estado>Finalizada</Estado>
+    <IDSala>1</IDSala>
+    <PuntosJ1>30</PuntosJ1>
+    <PuntosJ2>15</PuntosJ2>
+    <TiempoDePartida1>0:02:15</TiempoDePartida1>
+    <TurnosRestantes1>0</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>2</Creador>
+    <Estado>Finalizada</Estado>
+    <IDSala>2</IDSala>
+    <PuntosJ1>35</PuntosJ1>
+    <PuntosJ2>50</PuntosJ2>
+    <TiempoDePartida1>0:05:36</TiempoDePartida1>
+    <TurnosRestantes1>0</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>3</Creador>
+    <Estado>En partida</Estado>
+    <IDSala>3</IDSala>
+    <PuntosJ1>0</PuntosJ1>
+    <PuntosJ2>0</PuntosJ2>
+    <TiempoDePartida1>0:00:00</TiempoDePartida1>
+    <TurnosRestantes1>8</TurnosRestantes1>
+  </Salas>
+</ArrayOfSalas>

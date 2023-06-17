@@ -77,7 +77,7 @@
             this.lblCantidadDePartidasJugadas.AutoSize = true;
             this.lblCantidadDePartidasJugadas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadDePartidasJugadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadDePartidasJugadas.Location = new System.Drawing.Point(171, 159);
+            this.lblCantidadDePartidasJugadas.Location = new System.Drawing.Point(161, 159);
             this.lblCantidadDePartidasJugadas.Name = "lblCantidadDePartidasJugadas";
             this.lblCantidadDePartidasJugadas.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadDePartidasJugadas.TabIndex = 11;
@@ -99,7 +99,7 @@
             this.lblCantidadDePartidasGanadas.AutoSize = true;
             this.lblCantidadDePartidasGanadas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadDePartidasGanadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadDePartidasGanadas.Location = new System.Drawing.Point(495, 159);
+            this.lblCantidadDePartidasGanadas.Location = new System.Drawing.Point(491, 159);
             this.lblCantidadDePartidasGanadas.Name = "lblCantidadDePartidasGanadas";
             this.lblCantidadDePartidasGanadas.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadDePartidasGanadas.TabIndex = 13;
@@ -110,7 +110,7 @@
             this.lblPorcentajeDeVictoria.AutoSize = true;
             this.lblPorcentajeDeVictoria.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentajeDeVictoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPorcentajeDeVictoria.Location = new System.Drawing.Point(591, 159);
+            this.lblPorcentajeDeVictoria.Location = new System.Drawing.Point(569, 159);
             this.lblPorcentajeDeVictoria.Name = "lblPorcentajeDeVictoria";
             this.lblPorcentajeDeVictoria.Size = new System.Drawing.Size(194, 22);
             this.lblPorcentajeDeVictoria.TabIndex = 14;
@@ -121,7 +121,7 @@
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorcentaje.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPorcentaje.Location = new System.Drawing.Point(804, 159);
+            this.lblPorcentaje.Location = new System.Drawing.Point(769, 159);
             this.lblPorcentaje.Name = "lblPorcentaje";
             this.lblPorcentaje.Size = new System.Drawing.Size(20, 22);
             this.lblPorcentaje.TabIndex = 15;

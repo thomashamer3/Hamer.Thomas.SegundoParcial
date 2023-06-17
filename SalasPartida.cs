@@ -39,7 +39,6 @@ namespace Hamer.Thomas.SegundoParcial
         public List<Salas> ListAux { get => listAux; set => listAux = value; }
         public List<Salas> Salas { get => salas; set => salas = value; }
         public Ordenar TipoDeSort { get => tipoDeSort; set => tipoDeSort = value; }
-        public Usuarios UsuarioIngresado { get => usuarioIngresado; set => usuarioIngresado = value; }
 
         #endregion Propiedades
 

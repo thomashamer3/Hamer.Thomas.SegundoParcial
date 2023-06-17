@@ -9,6 +9,7 @@ namespace Hamer.Thomas.SegundoParcial
         #region Atributos
 
         private BaseDeDatos ado = new BaseDeDatos();
+        private AdoUsuarios adoUsu = new AdoUsuarios();
         private Estadisticas estadistica = new Estadisticas();
         private int id;
         private double partidasGanadas;

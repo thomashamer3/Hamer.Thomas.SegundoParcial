@@ -12,9 +12,9 @@ namespace Entidades
         #region Atributos
 
         private static BaseDeDatos ado = new BaseDeDatos();
-        private static List<Estadisticas> listaEstadisticas = new List<Estadisticas>();
-        private static List<Salas> listaSalas = new List<Salas>();
-        private static List<Usuarios> listaUsuarios = new List<Usuarios>();
+        private static List<Estadisticas> listaEstadisticas;
+        private static List<Salas> listaSalas;
+        private static List<Usuarios> listaUsuarios;
 
         #endregion Atributos
 
@@ -27,9 +27,9 @@ namespace Entidades
         public static void GuardarListasEnJSON()
         {
             string folderPath = AppDomain.CurrentDomain.BaseDirectory;
-            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.json");
-            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.json");
-            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.json");
+            string rutaEstadisticas = Path.Combine(folderPath, "Estadisticas.json");
+            string rutaSalas = Path.Combine(folderPath, "Salas.json");
+            string rutaUsuarios = Path.Combine(folderPath, "Usuarios.json");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             string jsonEstadisticas = JsonConvert.SerializeObject(listaEstadisticas);
@@ -50,9 +50,9 @@ namespace Entidades
         public static void GuardarListasEnTXT()
         {
             string folderPath = AppDomain.CurrentDomain.BaseDirectory;
-            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.txt");
-            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.txt");
-            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.txt");
+            string rutaEstadisticas = Path.Combine(folderPath, "Estadisticas.txt");
+            string rutaSalas = Path.Combine(folderPath, "Salas.txt");
+            string rutaUsuarios = Path.Combine(folderPath, "Usuarios.txt");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             StringBuilder sbEstadisticas = new StringBuilder();
@@ -89,27 +89,27 @@ namespace Entidades
         public static void GuardarListasEnXML()
         {
             string folderPath = AppDomain.CurrentDomain.BaseDirectory;
-            string rutaEstadisticas = Path.Combine(folderPath, "Archivos", "Estadisticas.xml");
-            string rutaSalas = Path.Combine(folderPath, "Archivos", "Salas.xml");
-            string rutaUsuarios = Path.Combine(folderPath, "Archivos", "Usuarios.xml");
+            string rutaEstadisticas = Path.Combine(folderPath, "Estadisticas.xml");
+            string rutaSalas = Path.Combine(folderPath, "Salas.xml");
+            string rutaUsuarios = Path.Combine(folderPath, "Usuarios.xml");
 
             listaEstadisticas = ConseguirListaEstadisticas();
             XmlSerializer serializerEstadisticas = new XmlSerializer(typeof(List<Estadisticas>));
-            using (TextWriter writer = new StreamWriter(rutaEstadisticas))
+            using (TextWriter writer = new StreamWriter(rutaEstadisticas, false))
             {
                 serializerEstadisticas.Serialize(writer, listaEstadisticas);
             }
 
             listaSalas = ConseguirListaSalas();
             XmlSerializer serializerSalas = new XmlSerializer(typeof(List<Salas>));
-            using (TextWriter writer = new StreamWriter(rutaSalas))
+            using (TextWriter writer = new StreamWriter(rutaSalas, false))
             {
                 serializerSalas.Serialize(writer, listaSalas);
             }
 
             listaUsuarios = ConseguirListaUsuarios();
             XmlSerializer serializerUsuarios = new XmlSerializer(typeof(List<Usuarios>));
-            using (TextWriter writer = new StreamWriter(rutaUsuarios))
+            using (TextWriter writer = new StreamWriter(rutaUsuarios, false))
             {
                 serializerUsuarios.Serialize(writer, listaUsuarios);
             }
