@@ -35,6 +35,7 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btn_Registrarse = new System.Windows.Forms.Button();
+            this.lblIncorrecto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblGenerala
@@ -101,12 +102,25 @@
             this.btn_Registrarse.UseVisualStyleBackColor = false;
             this.btn_Registrarse.Click += new System.EventHandler(this.btn_Registrarse_Click);
             // 
+            // lblIncorrecto
+            // 
+            this.lblIncorrecto.AutoSize = true;
+            this.lblIncorrecto.BackColor = System.Drawing.Color.Transparent;
+            this.lblIncorrecto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrecto.Location = new System.Drawing.Point(214, 249);
+            this.lblIncorrecto.Name = "lblIncorrecto";
+            this.lblIncorrecto.Size = new System.Drawing.Size(179, 25);
+            this.lblIncorrecto.TabIndex = 9;
+            this.lblIncorrecto.Text = "Usuario Incorrecto";
+            this.lblIncorrecto.Visible = false;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(59)))), ((int)(((byte)(108)))));
             this.ClientSize = new System.Drawing.Size(546, 418);
+            this.Controls.Add(this.lblIncorrecto);
             this.Controls.Add(this.btn_Registrarse);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.lblClave);
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btn_Registrarse;
+        private System.Windows.Forms.Label lblIncorrecto;
     }
 }

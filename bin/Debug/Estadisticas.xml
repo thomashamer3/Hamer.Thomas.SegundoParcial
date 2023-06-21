@@ -12,7 +12,7 @@
     <Id>2</Id>
     <NombreUsuario>juan</NombreUsuario>
     <PartidasGanadas>1</PartidasGanadas>
-    <PartidasJugadas>3</PartidasJugadas>
+    <PartidasJugadas>4</PartidasJugadas>
   </Estadisticas>
   <Estadisticas>
     <nombreUsuario>Messi</nombreUsuario>
@@ -20,5 +20,19 @@
     <NombreUsuario>Messi</NombreUsuario>
     <PartidasGanadas>1</PartidasGanadas>
     <PartidasJugadas>5</PartidasJugadas>
+  </Estadisticas>
+  <Estadisticas>
+    <nombreUsuario>lol</nombreUsuario>
+    <Id>4</Id>
+    <NombreUsuario>lol</NombreUsuario>
+    <PartidasGanadas>5</PartidasGanadas>
+    <PartidasJugadas>5</PartidasJugadas>
+  </Estadisticas>
+  <Estadisticas>
+    <nombreUsuario>admin</nombreUsuario>
+    <Id>5</Id>
+    <NombreUsuario>admin</NombreUsuario>
+    <PartidasGanadas>6</PartidasGanadas>
+    <PartidasJugadas>8</PartidasJugadas>
   </Estadisticas>
 </ArrayOfEstadisticas>

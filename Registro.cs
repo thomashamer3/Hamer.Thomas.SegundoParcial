@@ -48,7 +48,7 @@ namespace Hamer.Thomas.SegundoParcial
             }
             else
             {
-                MessageBox.Show("Clave o Usuario Incorrectos.", "Error.");
+                lblIncorrecto.Visible = true;
             }
         }
 

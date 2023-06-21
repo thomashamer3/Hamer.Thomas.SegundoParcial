@@ -135,6 +135,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\dado1.png" />
+    <Content Include="Properties\dado2.png" />
+    <Content Include="Properties\dado3.png" />
+    <Content Include="Properties\dado4.png" />
+    <Content Include="Properties\dado5.png" />
+    <Content Include="Properties\dado6.png" />
     <Content Include="Resources\cargando.gif" />
     <Content Include="Resources\dado1.png" />
     <Content Include="Resources\dado2.png" />

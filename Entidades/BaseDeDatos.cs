@@ -119,15 +119,19 @@ namespace Entidades
 
             try
             {
-                string sql = "INSERT INTO Salas (CreadorID,EstadoSala,PuntosJ1,PuntosJ2,TurnosRestantes,TiempoDePartida) VALUES(";
-                sql = sql + "'" + sala.Creador + "','" + sala.Estado + "'," + sala.PuntosJ1.ToString() + "," + sala.PuntosJ2.ToString() + "," + sala.TurnosRestantes1 +
-                    ",'" + sala.TiempoDePartida1 + "')";
+                string sql = "INSERT INTO Salas (CreadorID, EstadoSala, PuntosJ1, PuntosJ2, TurnosRestantes, TiempoDePartida) VALUES (@CreadorID, @EstadoSala, @PuntosJ1, @PuntosJ2, @TurnosRestantes, @TiempoDePartida)";
 
                 this.comando = new SqlCommand();
-
                 this.comando.CommandType = CommandType.Text;
                 this.comando.CommandText = sql;
                 this.comando.Connection = this.conexion;
+
+                this.comando.Parameters.AddWithValue("@CreadorID", sala.Creador);
+                this.comando.Parameters.AddWithValue("@EstadoSala", sala.Estado);
+                this.comando.Parameters.AddWithValue("@PuntosJ1", sala.PuntosJ1.ToString());
+                this.comando.Parameters.AddWithValue("@PuntosJ2", sala.PuntosJ2.ToString());
+                this.comando.Parameters.AddWithValue("@TurnosRestantes", sala.TurnosRestantes1);
+                this.comando.Parameters.AddWithValue("@TiempoDePartida", sala.TiempoDePartida1);
 
                 this.conexion.Open();
 
@@ -334,7 +338,7 @@ namespace Entidades
                 this.comando = new SqlCommand();
 
                 this.comando.CommandType = CommandType.Text;
-                this.comando.CommandText = "SELECT ID FROM Usuarios WHERE nombreUsuario = '" + usuario.NombreUsuario + "'";
+                this.comando.CommandText = "SELECT id FROM Usuarios WHERE nombreUsuario = '" + usuario.NombreUsuario + "'";
                 this.comando.Connection = this.conexion;
 
                 this.conexion.Open();

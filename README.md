@@ -15,7 +15,7 @@ Generics: Lo usé para pasar un parámetro sin especificar el tipo.
 
 Serialización: Hice un archivo JSON,XML y TXT serializando las estadísticas,salas y usuarios.
 
-Escritura de archivos: Hice un archivo pasandole las estadísticas.
+Escritura de archivos: Hice un archivo pasandole las estadísticas, salas y usuarios, los mismos se encuentran en Hamer.Thomas.SegundoParcial\bin\Debug.
 
 Interfaces: Lo utilicé para agregar los métodos de la base de datos.
 

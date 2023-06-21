@@ -36,7 +36,7 @@ namespace Testeo
         public void TestSelecionarEstadisticas()
         {
             // Arrange
-            Estadisticas estadisticas = new Estadisticas();
+            AdoEstadisticas estadisticas = new AdoEstadisticas();
 
             // Act
             List<Estadisticas> lista = estadisticas.Selecionar();
@@ -50,15 +50,16 @@ namespace Testeo
         public void TestSelecionarUsuarios()
         {
             // Arrange
-            Usuarios usuarios = new Usuarios();
+            AdoUsuarios adoUsuarios = new AdoUsuarios();
 
             // Act
-            List<Usuarios> lista = usuarios.Selecionar();
+            List<Usuarios> lista = adoUsuarios.Selecionar();
 
             // Assert
             Assert.IsNotNull(lista);
             Assert.IsTrue(lista.Count > 0);
         }
+
 
         [TestMethod]
         public void GetDados()

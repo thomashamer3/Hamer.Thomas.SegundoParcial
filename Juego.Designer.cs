@@ -43,11 +43,11 @@
             this.lblBloqueadoDadoTres = new System.Windows.Forms.Label();
             this.lblBloqueadoDadoDos = new System.Windows.Forms.Label();
             this.lblBloqueadoDadoUno = new System.Windows.Forms.Label();
-            this.pictureBoxCincoBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCautroBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTresBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDosBloqueado = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUnoBloqueado = new System.Windows.Forms.PictureBox();
+            this.dado5img = new System.Windows.Forms.PictureBox();
+            this.dado4img = new System.Windows.Forms.PictureBox();
+            this.dado3img = new System.Windows.Forms.PictureBox();
+            this.dado2img = new System.Windows.Forms.PictureBox();
+            this.dado1img = new System.Windows.Forms.PictureBox();
             this.lblPuntoJugador2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblPuntosJugador1 = new System.Windows.Forms.Label();
@@ -86,13 +86,13 @@
             this.pictureBoxTres = new System.Windows.Forms.PictureBox();
             this.pictureBoxDos = new System.Windows.Forms.PictureBox();
             this.pictureBoxUno = new System.Windows.Forms.PictureBox();
-            this.lblRestantesCantidad = new System.Windows.Forms.Label();
+            this.lblTurnosRestantesCantidad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCincoBloqueado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCautroBloqueado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTresBloqueado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDosBloqueado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnoBloqueado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado5img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado4img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado3img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado2img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado1img)).BeginInit();
             this.panelDeValores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGenerala)).BeginInit();
@@ -109,7 +109,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblRestantesCantidad);
+            this.panel1.Controls.Add(this.lblTurnosRestantesCantidad);
             this.panel1.Controls.Add(this.lblTurnosRestantes);
             this.panel1.Controls.Add(this.lblTiempo);
             this.panel1.Controls.Add(this.lblTurnoJugador);
@@ -123,11 +123,11 @@
             this.panel1.Controls.Add(this.lblBloqueadoDadoTres);
             this.panel1.Controls.Add(this.lblBloqueadoDadoDos);
             this.panel1.Controls.Add(this.lblBloqueadoDadoUno);
-            this.panel1.Controls.Add(this.pictureBoxCincoBloqueado);
-            this.panel1.Controls.Add(this.pictureBoxCautroBloqueado);
-            this.panel1.Controls.Add(this.pictureBoxTresBloqueado);
-            this.panel1.Controls.Add(this.pictureBoxDosBloqueado);
-            this.panel1.Controls.Add(this.pictureBoxUnoBloqueado);
+            this.panel1.Controls.Add(this.dado5img);
+            this.panel1.Controls.Add(this.dado4img);
+            this.panel1.Controls.Add(this.dado3img);
+            this.panel1.Controls.Add(this.dado2img);
+            this.panel1.Controls.Add(this.dado1img);
             this.panel1.Controls.Add(this.lblPuntoJugador2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblPuntosJugador1);
@@ -157,9 +157,9 @@
             this.lblTurnosRestantes.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTurnosRestantes.Location = new System.Drawing.Point(508, 662);
             this.lblTurnosRestantes.Name = "lblTurnosRestantes";
-            this.lblTurnosRestantes.Size = new System.Drawing.Size(169, 22);
+            this.lblTurnosRestantes.Size = new System.Drawing.Size(154, 22);
             this.lblTurnosRestantes.TabIndex = 51;
-            this.lblTurnosRestantes.Text = "Turnos Restantes: 8";
+            this.lblTurnosRestantes.Text = "Turnos Restantes:";
             // 
             // lblTiempo
             // 
@@ -248,6 +248,7 @@
             this.lblBloqueadoDadoCinco.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoCinco.TabIndex = 43;
             this.lblBloqueadoDadoCinco.Text = "!Bloqueado¡";
+            this.lblBloqueadoDadoCinco.Visible = false;
             // 
             // lblBloqueadoDadoCuatro
             // 
@@ -259,6 +260,7 @@
             this.lblBloqueadoDadoCuatro.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoCuatro.TabIndex = 42;
             this.lblBloqueadoDadoCuatro.Text = "!Bloqueado¡";
+            this.lblBloqueadoDadoCuatro.Visible = false;
             // 
             // lblBloqueadoDadoTres
             // 
@@ -270,6 +272,7 @@
             this.lblBloqueadoDadoTres.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoTres.TabIndex = 41;
             this.lblBloqueadoDadoTres.Text = "!Bloqueado¡";
+            this.lblBloqueadoDadoTres.Visible = false;
             // 
             // lblBloqueadoDadoDos
             // 
@@ -281,6 +284,7 @@
             this.lblBloqueadoDadoDos.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoDos.TabIndex = 40;
             this.lblBloqueadoDadoDos.Text = "!Bloqueado¡";
+            this.lblBloqueadoDadoDos.Visible = false;
             // 
             // lblBloqueadoDadoUno
             // 
@@ -292,51 +296,62 @@
             this.lblBloqueadoDadoUno.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoUno.TabIndex = 39;
             this.lblBloqueadoDadoUno.Text = "!Bloqueado¡";
+            this.lblBloqueadoDadoUno.Visible = false;
             // 
-            // pictureBoxCincoBloqueado
+            // dado5img
             // 
-            this.pictureBoxCincoBloqueado.Location = new System.Drawing.Point(585, 516);
-            this.pictureBoxCincoBloqueado.Name = "pictureBoxCincoBloqueado";
-            this.pictureBoxCincoBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxCincoBloqueado.TabIndex = 38;
-            this.pictureBoxCincoBloqueado.TabStop = false;
-            this.pictureBoxCincoBloqueado.Click += new System.EventHandler(this.pictureBoxCincoBloqueado_Click);
+            this.dado5img.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dado5img.Enabled = false;
+            this.dado5img.Location = new System.Drawing.Point(585, 516);
+            this.dado5img.Name = "dado5img";
+            this.dado5img.Size = new System.Drawing.Size(75, 75);
+            this.dado5img.TabIndex = 38;
+            this.dado5img.TabStop = false;
+            this.dado5img.Click += new System.EventHandler(this.pictureBoxCincoBloqueado_Click);
             // 
-            // pictureBoxCautroBloqueado
+            // dado4img
             // 
-            this.pictureBoxCautroBloqueado.Location = new System.Drawing.Point(429, 516);
-            this.pictureBoxCautroBloqueado.Name = "pictureBoxCautroBloqueado";
-            this.pictureBoxCautroBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxCautroBloqueado.TabIndex = 37;
-            this.pictureBoxCautroBloqueado.TabStop = false;
-            this.pictureBoxCautroBloqueado.Click += new System.EventHandler(this.pictureBoxCautroBloqueado_Click);
+            this.dado4img.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dado4img.Enabled = false;
+            this.dado4img.Location = new System.Drawing.Point(429, 516);
+            this.dado4img.Name = "dado4img";
+            this.dado4img.Size = new System.Drawing.Size(75, 75);
+            this.dado4img.TabIndex = 37;
+            this.dado4img.TabStop = false;
+            this.dado4img.Click += new System.EventHandler(this.pictureBoxCautroBloqueado_Click);
             // 
-            // pictureBoxTresBloqueado
+            // dado3img
             // 
-            this.pictureBoxTresBloqueado.Location = new System.Drawing.Point(288, 516);
-            this.pictureBoxTresBloqueado.Name = "pictureBoxTresBloqueado";
-            this.pictureBoxTresBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxTresBloqueado.TabIndex = 36;
-            this.pictureBoxTresBloqueado.TabStop = false;
-            this.pictureBoxTresBloqueado.Click += new System.EventHandler(this.pictureBoxTresBloqueado_Click);
+            this.dado3img.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dado3img.Enabled = false;
+            this.dado3img.Location = new System.Drawing.Point(288, 516);
+            this.dado3img.Name = "dado3img";
+            this.dado3img.Size = new System.Drawing.Size(75, 75);
+            this.dado3img.TabIndex = 36;
+            this.dado3img.TabStop = false;
+            this.dado3img.Click += new System.EventHandler(this.pictureBoxTresBloqueado_Click);
             // 
-            // pictureBoxDosBloqueado
+            // dado2img
             // 
-            this.pictureBoxDosBloqueado.Location = new System.Drawing.Point(148, 516);
-            this.pictureBoxDosBloqueado.Name = "pictureBoxDosBloqueado";
-            this.pictureBoxDosBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxDosBloqueado.TabIndex = 35;
-            this.pictureBoxDosBloqueado.TabStop = false;
-            this.pictureBoxDosBloqueado.Click += new System.EventHandler(this.pictureBoxDosBloqueado_Click);
+            this.dado2img.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dado2img.Enabled = false;
+            this.dado2img.Location = new System.Drawing.Point(148, 516);
+            this.dado2img.Name = "dado2img";
+            this.dado2img.Size = new System.Drawing.Size(75, 75);
+            this.dado2img.TabIndex = 35;
+            this.dado2img.TabStop = false;
+            this.dado2img.Click += new System.EventHandler(this.pictureBoxDosBloqueado_Click);
             // 
-            // pictureBoxUnoBloqueado
+            // dado1img
             // 
-            this.pictureBoxUnoBloqueado.Location = new System.Drawing.Point(17, 516);
-            this.pictureBoxUnoBloqueado.Name = "pictureBoxUnoBloqueado";
-            this.pictureBoxUnoBloqueado.Size = new System.Drawing.Size(75, 75);
-            this.pictureBoxUnoBloqueado.TabIndex = 34;
-            this.pictureBoxUnoBloqueado.TabStop = false;
-            this.pictureBoxUnoBloqueado.Click += new System.EventHandler(this.pictureBoxUnoBloqueado_Click);
+            this.dado1img.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dado1img.Enabled = false;
+            this.dado1img.Location = new System.Drawing.Point(17, 516);
+            this.dado1img.Name = "dado1img";
+            this.dado1img.Size = new System.Drawing.Size(75, 75);
+            this.dado1img.TabIndex = 34;
+            this.dado1img.TabStop = false;
+            this.dado1img.Click += new System.EventHandler(this.pictureBoxUnoBloqueado_Click);
             // 
             // lblPuntoJugador2
             // 
@@ -784,16 +799,16 @@
             this.pictureBoxUno.TabStop = false;
             this.pictureBoxUno.Click += new System.EventHandler(this.pictureBoxUno_Click);
             // 
-            // lblRestantesCantidad
+            // lblTurnosRestantesCantidad
             // 
-            this.lblRestantesCantidad.AutoSize = true;
-            this.lblRestantesCantidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestantesCantidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRestantesCantidad.Location = new System.Drawing.Point(111, 662);
-            this.lblRestantesCantidad.Name = "lblRestantesCantidad";
-            this.lblRestantesCantidad.Size = new System.Drawing.Size(20, 22);
-            this.lblRestantesCantidad.TabIndex = 52;
-            this.lblRestantesCantidad.Text = "0";
+            this.lblTurnosRestantesCantidad.AutoSize = true;
+            this.lblTurnosRestantesCantidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnosRestantesCantidad.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTurnosRestantesCantidad.Location = new System.Drawing.Point(658, 662);
+            this.lblTurnosRestantesCantidad.Name = "lblTurnosRestantesCantidad";
+            this.lblTurnosRestantesCantidad.Size = new System.Drawing.Size(20, 22);
+            this.lblTurnosRestantesCantidad.TabIndex = 53;
+            this.lblTurnosRestantesCantidad.Text = "8";
             // 
             // Juego
             // 
@@ -810,11 +825,11 @@
             this.Load += new System.EventHandler(this.Juego_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCincoBloqueado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCautroBloqueado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTresBloqueado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDosBloqueado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUnoBloqueado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado5img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado4img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado3img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado2img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dado1img)).EndInit();
             this.panelDeValores.ResumeLayout(false);
             this.panelDeValores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLibre)).EndInit();
@@ -869,11 +884,11 @@
         private System.Windows.Forms.Label lblCantidadGenerala;
         private System.Windows.Forms.Label lblCantidadEscalera;
         private System.Windows.Forms.Label lblCantidadFull;
-        private System.Windows.Forms.PictureBox pictureBoxCincoBloqueado;
-        private System.Windows.Forms.PictureBox pictureBoxCautroBloqueado;
-        private System.Windows.Forms.PictureBox pictureBoxTresBloqueado;
-        private System.Windows.Forms.PictureBox pictureBoxDosBloqueado;
-        private System.Windows.Forms.PictureBox pictureBoxUnoBloqueado;
+        private System.Windows.Forms.PictureBox dado5img;
+        private System.Windows.Forms.PictureBox dado4img;
+        private System.Windows.Forms.PictureBox dado3img;
+        private System.Windows.Forms.PictureBox dado2img;
+        private System.Windows.Forms.PictureBox dado1img;
         private System.Windows.Forms.Label lblPuntoJugador2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblPuntosJugador1;
@@ -891,6 +906,6 @@
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Label lblTurnoJugador;
         private System.Windows.Forms.Label lblRestantes;
-        private System.Windows.Forms.Label lblRestantesCantidad;
+        private System.Windows.Forms.Label lblTurnosRestantesCantidad;
     }
 }

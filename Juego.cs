@@ -139,23 +139,23 @@ namespace Hamer.Thomas.SegundoParcial
                 switch (tirada)
                 {
                     case 1:
-                        dado.Image = Properties.Resources.dado1;
+                        dado.Image = Image.FromFile("dado1.png");
                         break;
 
                     case 2:
-                        dado.Image = Properties.Resources.dado2;
+                        dado.Image = Image.FromFile("dado2.png");
                         break;
 
                     case 3:
-                        dado.Image = Properties.Resources.dado3;
+                        dado.Image = Image.FromFile("dado3.png");
                         break;
 
                     case 4:
-                        dado.Image = Properties.Resources.dado4;
+                        dado.Image = Image.FromFile("dado4.png");
                         break;
 
                     case 5:
-                        dado.Image = Properties.Resources.dado5;
+                        dado.Image = Image.FromFile("dado5.png");
                         break;
 
                     case 6:
@@ -197,7 +197,7 @@ namespace Hamer.Thomas.SegundoParcial
             if (tocoBoton == true & turnoJugador != 8)
             {
                 contadorTurnos--;
-                lblTurnosRestantes.Text = contadorTurnos.ToString();
+                lblTurnosRestantesCantidad.Text = contadorTurnos.ToString();
 
                 if (turnoJugador == 1)
                 {
@@ -315,11 +315,11 @@ namespace Hamer.Thomas.SegundoParcial
             contador++;
             if (contador <= 3)
             {
-                TiradaDeDados(pictureBoxUno, 0);
-                TiradaDeDados(pictureBoxDos, 1);
-                TiradaDeDados(pictureBoxTres, 2);
-                TiradaDeDados(pictureBoxCuatro, 3);
-                TiradaDeDados(pictureBoxCinco, 4);
+                TiradaDeDados(dado1img, 0);
+                TiradaDeDados(dado2img, 1);
+                TiradaDeDados(dado3img, 2);
+                TiradaDeDados(dado4img, 3);
+                TiradaDeDados(dado5img, 4);
                 if (contador == 1)
                 {
                     lblRestantes.Text = "Restantes: 2";
@@ -337,11 +337,11 @@ namespace Hamer.Thomas.SegundoParcial
                 }
             }
             Valores();
-            pictureBoxUno.Enabled = true;
-            pictureBoxDos.Enabled = true;
-            pictureBoxTres.Enabled = true;
-            pictureBoxCuatro.Enabled = true;
-            pictureBoxCinco.Enabled = true;
+            dado1img.Enabled = true;
+            dado2img.Enabled = true;
+            dado3img.Enabled = true;
+            dado4img.Enabled = true;
+            dado5img.Enabled = true;
         }
 
         /// <summary>
@@ -569,8 +569,6 @@ namespace Hamer.Thomas.SegundoParcial
 
             btnConfirmar.Enabled = false;
             estadoDePartida = true;
-
-            // Mandar a la base de datos de estadísticas.
         }
 
         /// <summary>
@@ -646,7 +644,7 @@ namespace Hamer.Thomas.SegundoParcial
             RevisarEstadoDePartida();
             lblPuntosJugador1.Text = J1Puntos.ToString();
             lblPuntoJugador2.Text = J2Puntos.ToString();
-            lblRestantesCantidad.Text = contadorTurnos.ToString();
+            lblTurnosRestantesCantidad.Text = contadorTurnos.ToString();
             tiempo = Convert.ToDateTime(TiempoDePartida);
             ConsultarTurno();
             Task t = new Task(CambiarHora);
@@ -1074,16 +1072,16 @@ namespace Hamer.Thomas.SegundoParcial
         /// </summary>
         private void RestaurarDados()
         {
-            pictureBoxUno.Enabled = false;
-            pictureBoxDos.Enabled = false;
-            pictureBoxTres.Enabled = false;
-            pictureBoxCuatro.Enabled = false;
-            pictureBoxCinco.Enabled = false;
-            pictureBoxUno.Image = null;
-            pictureBoxDos.Image = null;
-            pictureBoxTres.Image = null;
-            pictureBoxCuatro.Image = null;
-            pictureBoxCinco.Image = null;
+            dado1img.Enabled = false;
+            dado2img.Enabled = false;
+            dado3img.Enabled = false;
+            dado4img.Enabled = false;
+            dado5img.Enabled = false;
+            dado1img.Image = null;
+            dado2img.Image = null;
+            dado3img.Image = null;
+            dado4img.Image = null;
+            dado5img.Image = null;
             lblBloqueadoDadoUno.Visible = false;
             lblBloqueadoDadoDos.Visible = false;
             lblBloqueadoDadoTres.Visible = false;

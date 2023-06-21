@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfUsuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfUsuarios xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Usuarios>
+    <Clave>12345678</Clave>
+    <NombreUsuario>thomas</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>12345</Clave>
+    <NombreUsuario>juan</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>1010</Clave>
+    <NombreUsuario>Messi</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>1235678</Clave>
+    <NombreUsuario>lol</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>admin</Clave>
+    <NombreUsuario>admin</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>12345678</Clave>
+    <NombreUsuario>Manuel2023</NombreUsuario>
+  </Usuarios>
+</ArrayOfUsuarios>

@@ -1,6 +1,16 @@
 ID Sala: 1 - Creador: 1 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 30 - Puntos Jugador 2: 15 - Turnos Restantes: 0- Tiempo de Partida: 0:02:15
 
-ID Sala: 2 - Creador: 2 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 35 - Puntos Jugador 2: 50 - Turnos Restantes: 0- Tiempo de Partida: 0:05:36
+ID Sala: 2 - Creador: 2 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 35 - Puntos Jugador 2: 50 - Turnos Restantes: 0- Tiempo de Partida: 0:05:44
 
 ID Sala: 3 - Creador: 3 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 4 - Creador: 4 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 50 - Puntos Jugador 2: 20 - Turnos Restantes: 1- Tiempo de Partida: 0:06:30
+
+ID Sala: 5 - Creador: 5 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 36 - Puntos Jugador 2: 18 - Turnos Restantes: 0- Tiempo de Partida: 0:05:00
+
+ID Sala: 6 - Creador: 2 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 7 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 8 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 

@@ -1,0 +1,6 @@
+Nombre de usuario: thomas - Clave: 12345678
+Nombre de usuario: juan - Clave: 12345
+Nombre de usuario: Messi - Clave: 1010
+Nombre de usuario: lol - Clave: 1235678
+Nombre de usuario: admin - Clave: admin
+Nombre de usuario: Manuel2023 - Clave: 12345678
