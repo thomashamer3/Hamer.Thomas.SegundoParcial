@@ -13,6 +13,7 @@ namespace Hamer.Thomas.SegundoParcial
     {
         #region Atributos
 
+        private Random rnd = new Random();
         public static List<Dados> Listadados = Dados.GetDados();
         private BaseDeDatos ado = new BaseDeDatos();
         private int contador = 0;
@@ -132,7 +133,6 @@ namespace Hamer.Thomas.SegundoParcial
         {
             if (Listadados[index].Estado == true)
             {
-                Random rnd = new Random();
                 int tirada = rnd.Next(1, 7);
                 Listadados[index].ValorDado = tirada;
 

@@ -25,14 +25,14 @@
     <nombreUsuario>lol</nombreUsuario>
     <Id>4</Id>
     <NombreUsuario>lol</NombreUsuario>
-    <PartidasGanadas>5</PartidasGanadas>
-    <PartidasJugadas>5</PartidasJugadas>
+    <PartidasGanadas>3</PartidasGanadas>
+    <PartidasJugadas>2</PartidasJugadas>
   </Estadisticas>
   <Estadisticas>
     <nombreUsuario>admin</nombreUsuario>
     <Id>5</Id>
     <NombreUsuario>admin</NombreUsuario>
-    <PartidasGanadas>6</PartidasGanadas>
-    <PartidasJugadas>8</PartidasJugadas>
+    <PartidasGanadas>4</PartidasGanadas>
+    <PartidasJugadas>6</PartidasJugadas>
   </Estadisticas>
 </ArrayOfEstadisticas>

@@ -4,13 +4,23 @@ ID Sala: 2 - Creador: 2 - Nombre del Creador:  - Estado: Finalizada - Puntos Jug
 
 ID Sala: 3 - Creador: 3 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 
-ID Sala: 4 - Creador: 4 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 50 - Puntos Jugador 2: 20 - Turnos Restantes: 1- Tiempo de Partida: 0:06:30
+ID Sala: 4 - Creador: 4 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 50 - Puntos Jugador 2: 60 - Turnos Restantes: 0- Tiempo de Partida: 0:07:06
 
 ID Sala: 5 - Creador: 5 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 36 - Puntos Jugador 2: 18 - Turnos Restantes: 0- Tiempo de Partida: 0:05:00
 
-ID Sala: 6 - Creador: 2 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+ID Sala: 6 - Creador: 2 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 91 - Puntos Jugador 2: 79 - Turnos Restantes: 0- Tiempo de Partida: 0:01:22
 
 ID Sala: 7 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 9 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 10 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 11 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 12 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
+ID Sala: 13 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 
 ID Sala: 8 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 
