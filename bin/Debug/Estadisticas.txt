@@ -1,4 +1,4 @@
-ID: 1 - Nombre de Usuario: thomas - Partidas Ganadas: 2 - Partidas Jugadas: 3
+ID: 1 - Nombre de Usuario: thomas - Partidas Ganadas: 2 - Partidas Jugadas: 4
 ID: 2 - Nombre de Usuario: juan - Partidas Ganadas: 1 - Partidas Jugadas: 4
 ID: 3 - Nombre de Usuario: Messi - Partidas Ganadas: 1 - Partidas Jugadas: 5
 ID: 4 - Nombre de Usuario: lol - Partidas Ganadas: 3 - Partidas Jugadas: 2

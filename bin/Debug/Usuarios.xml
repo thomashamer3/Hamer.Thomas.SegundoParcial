@@ -32,4 +32,8 @@
     <Clave>12345</Clave>
     <NombreUsuario>crack</NombreUsuario>
   </Usuarios>
+  <Usuarios>
+    <Clave>123456</Clave>
+    <NombreUsuario>usuarioNuevo</NombreUsuario>
+  </Usuarios>
 </ArrayOfUsuarios>

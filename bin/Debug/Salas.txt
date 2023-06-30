@@ -22,5 +22,15 @@ ID Sala: 12 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Ju
 
 ID Sala: 13 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 
+ID Sala: 14 - Creador: 1 - Nombre del Creador:  - Estado: Activa - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 10- Tiempo de Partida: 00:30:00
+
+ID Sala: 15 - Creador: 1 - Nombre del Creador:  - Estado: Activa - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 10- Tiempo de Partida: 00:30:00
+
+ID Sala: 16 - Creador: 1 - Nombre del Creador:  - Estado: Finalizada - Puntos Jugador 1: 25 - Puntos Jugador 2: 97 - Turnos Restantes: 0- Tiempo de Partida: 0:32:07
+
+ID Sala: 17 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 10- Tiempo de Partida: 00:30:00
+
+ID Sala: 18 - Creador: 5 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
+
 ID Sala: 8 - Creador: 1 - Nombre del Creador:  - Estado: En partida - Puntos Jugador 1: 0 - Puntos Jugador 2: 0 - Turnos Restantes: 8- Tiempo de Partida: 0:00:00
 

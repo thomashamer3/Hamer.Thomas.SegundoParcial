@@ -110,6 +110,51 @@
   </Salas>
   <Salas>
     <Creador>1</Creador>
+    <Estado>Activa</Estado>
+    <IDSala>14</IDSala>
+    <PuntosJ1>0</PuntosJ1>
+    <PuntosJ2>0</PuntosJ2>
+    <TiempoDePartida1>00:30:00</TiempoDePartida1>
+    <TurnosRestantes1>10</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>1</Creador>
+    <Estado>Activa</Estado>
+    <IDSala>15</IDSala>
+    <PuntosJ1>0</PuntosJ1>
+    <PuntosJ2>0</PuntosJ2>
+    <TiempoDePartida1>00:30:00</TiempoDePartida1>
+    <TurnosRestantes1>10</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>1</Creador>
+    <Estado>Finalizada</Estado>
+    <IDSala>16</IDSala>
+    <PuntosJ1>25</PuntosJ1>
+    <PuntosJ2>97</PuntosJ2>
+    <TiempoDePartida1>0:32:07</TiempoDePartida1>
+    <TurnosRestantes1>0</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>1</Creador>
+    <Estado>En partida</Estado>
+    <IDSala>17</IDSala>
+    <PuntosJ1>0</PuntosJ1>
+    <PuntosJ2>0</PuntosJ2>
+    <TiempoDePartida1>00:30:00</TiempoDePartida1>
+    <TurnosRestantes1>10</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>5</Creador>
+    <Estado>En partida</Estado>
+    <IDSala>18</IDSala>
+    <PuntosJ1>0</PuntosJ1>
+    <PuntosJ2>0</PuntosJ2>
+    <TiempoDePartida1>0:00:00</TiempoDePartida1>
+    <TurnosRestantes1>8</TurnosRestantes1>
+  </Salas>
+  <Salas>
+    <Creador>1</Creador>
     <Estado>En partida</Estado>
     <IDSala>8</IDSala>
     <PuntosJ1>0</PuntosJ1>

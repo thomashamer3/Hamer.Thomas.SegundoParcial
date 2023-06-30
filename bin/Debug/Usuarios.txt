@@ -6,3 +6,4 @@ Nombre de usuario: admin - Clave: admin
 Nombre de usuario: Manuel2023 - Clave: 12345678
 Nombre de usuario: JUANITO10 - Clave: 1010
 Nombre de usuario: crack - Clave: 12345
+Nombre de usuario: usuarioNuevo - Clave: 123456

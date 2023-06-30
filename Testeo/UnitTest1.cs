@@ -69,7 +69,7 @@ namespace Testeo
             Salas salaNueva = new Salas
             {
                 Creador = 1,
-                Estado = "Activa",
+                Estado = "En partida",
                 PuntosJ1 = 0,
                 PuntosJ2 = 0,
                 TurnosRestantes1 = 10,
