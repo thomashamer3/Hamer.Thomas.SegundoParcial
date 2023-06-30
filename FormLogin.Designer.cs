@@ -44,7 +44,8 @@
             this.lblGenerala.AutoSize = true;
             this.lblGenerala.BackColor = System.Drawing.Color.Transparent;
             this.lblGenerala.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerala.Location = new System.Drawing.Point(228, 22);
+            this.lblGenerala.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblGenerala.Location = new System.Drawing.Point(227, 21);
             this.lblGenerala.Name = "lblGenerala";
             this.lblGenerala.Size = new System.Drawing.Size(124, 26);
             this.lblGenerala.TabIndex = 0;
@@ -55,6 +56,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
             this.lblUsuario.Location = new System.Drawing.Point(166, 69);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(81, 25);
@@ -63,9 +65,10 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(171, 97);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(248, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(248, 22);
             this.txtUsuario.TabIndex = 1;
             // 
             // lblClave
@@ -73,6 +76,7 @@
             this.lblClave.AutoSize = true;
             this.lblClave.BackColor = System.Drawing.Color.Transparent;
             this.lblClave.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.ForeColor = System.Drawing.SystemColors.Control;
             this.lblClave.Location = new System.Drawing.Point(166, 144);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(59, 25);
@@ -81,10 +85,11 @@
             // 
             // txtClave
             // 
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.txtClave.Location = new System.Drawing.Point(171, 172);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(248, 20);
+            this.txtClave.Size = new System.Drawing.Size(248, 22);
             this.txtClave.TabIndex = 2;
             this.txtClave.UseSystemPasswordChar = true;
             // 
@@ -120,14 +125,15 @@
             // 
             // lblIncorrecto
             // 
-            this.lblIncorrecto.AutoSize = true;
             this.lblIncorrecto.BackColor = System.Drawing.Color.Transparent;
-            this.lblIncorrecto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIncorrecto.Location = new System.Drawing.Point(199, 300);
+            this.lblIncorrecto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrecto.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblIncorrecto.Location = new System.Drawing.Point(21, 300);
             this.lblIncorrecto.Name = "lblIncorrecto";
-            this.lblIncorrecto.Size = new System.Drawing.Size(179, 25);
+            this.lblIncorrecto.Size = new System.Drawing.Size(556, 25);
             this.lblIncorrecto.TabIndex = 10;
             this.lblIncorrecto.Text = "Usuario Incorrecto";
+            this.lblIncorrecto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblIncorrecto.Visible = false;
             // 
             // FormLogin
@@ -135,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(59)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(546, 418);
+            this.ClientSize = new System.Drawing.Size(555, 393);
             this.Controls.Add(this.lblIncorrecto);
             this.Controls.Add(this.btn_Registrarse);
             this.Controls.Add(this.btn_Aceptar);

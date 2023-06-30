@@ -4,8 +4,8 @@
     {
         #region Atributos
 
-        public string nombreUsuario;
         private int id;
+        private string nombreUsuario;
         private int partidasGanadas;
         private int partidasJugadas;
 

@@ -9,7 +9,6 @@ namespace Hamer.Thomas.SegundoParcial
         #region Atributos
 
         private BaseDeDatos ado = new BaseDeDatos();
-        private AdoUsuarios adoUsu = new AdoUsuarios();
         private Estadisticas estadistica = new Estadisticas();
         private int id;
         private double partidasGanadas;
@@ -106,7 +105,7 @@ namespace Hamer.Thomas.SegundoParcial
             lblCantidadDePartidasGanadas.Text = partidasGanadas.ToString();
             lblCantidadDePartidasJugadas.Text = partidasJugadas.ToString();
             porcentaje = (partidasGanadas / partidasJugadas) * 100;
-            lblPorcentaje.Text = porcentaje.ToString() + "%";
+            lblPorcentaje.Text = string.Format("{0:0.00}%", porcentaje);
         }
 
         #endregion Metodos

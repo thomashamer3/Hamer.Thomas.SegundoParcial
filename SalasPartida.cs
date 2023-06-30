@@ -302,18 +302,21 @@ namespace Hamer.Thomas.SegundoParcial
         /// sobre la celda en la que se hizo clic en un control DataGridView.</param>
         private void DGVSalas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Juego juego = new Juego();
+            if (e.RowIndex >= 0)
+            {
+                Juego juego = new Juego();
 
-            juego.CreadorNombre = DGVSalas.CurrentRow.Cells["nombreUsuario"].Value.ToString();
-            juego.IdSala = Convert.ToInt32(DGVSalas.CurrentRow.Cells["ID"].Value);
-            juego.J1Puntos = Convert.ToInt32(DGVSalas.CurrentRow.Cells["PuntosJ1"].Value);
-            juego.J2Puntos = Convert.ToInt32(DGVSalas.CurrentRow.Cells["PuntosJ2"].Value);
-            juego.ContadorTurnos = Convert.ToInt32(DGVSalas.CurrentRow.Cells["TurnosRestantes"].Value);
-            juego.EstadoSala = DGVSalas.CurrentRow.Cells["estado"].Value.ToString();
-            juego.TiempoDePartida = DGVSalas.CurrentRow.Cells["TiempoDePartida"].Value.ToString();
-            juego.IdCreador = Convert.ToInt32(DGVSalas.CurrentRow.Cells["IdCreador"].Value);
+                juego.CreadorNombre = DGVSalas.Rows[e.RowIndex].Cells["nombreUsuario"].Value.ToString();
+                juego.IdSala = Convert.ToInt32(DGVSalas.Rows[e.RowIndex].Cells["ID"].Value);
+                juego.J1Puntos = Convert.ToInt32(DGVSalas.Rows[e.RowIndex].Cells["PuntosJ1"].Value);
+                juego.J2Puntos = Convert.ToInt32(DGVSalas.Rows[e.RowIndex].Cells["PuntosJ2"].Value);
+                juego.ContadorTurnos = Convert.ToInt32(DGVSalas.Rows[e.RowIndex].Cells["TurnosRestantes"].Value);
+                juego.EstadoSala = DGVSalas.Rows[e.RowIndex].Cells["estado"].Value.ToString();
+                juego.TiempoDePartida = DGVSalas.Rows[e.RowIndex].Cells["TiempoDePartida"].Value.ToString();
+                juego.IdCreador = Convert.ToInt32(DGVSalas.Rows[e.RowIndex].Cells["IdCreador"].Value);
 
-            juego.ShowDialog();
+                juego.Show();
+            }
         }
 
         /// <summary>

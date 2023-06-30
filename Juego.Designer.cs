@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Juego));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTurnosRestantesCantidad = new System.Windows.Forms.Label();
             this.lblTurnosRestantes = new System.Windows.Forms.Label();
             this.lblTiempo = new System.Windows.Forms.Label();
             this.lblTurnoJugador = new System.Windows.Forms.Label();
@@ -86,7 +87,6 @@
             this.pictureBoxTres = new System.Windows.Forms.PictureBox();
             this.pictureBoxDos = new System.Windows.Forms.PictureBox();
             this.pictureBoxUno = new System.Windows.Forms.PictureBox();
-            this.lblTurnosRestantesCantidad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dado5img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado4img)).BeginInit();
@@ -147,57 +147,68 @@
             this.panel1.Controls.Add(this.pictureBoxUno);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(685, 711);
+            this.panel1.Size = new System.Drawing.Size(577, 553);
             this.panel1.TabIndex = 0;
+            // 
+            // lblTurnosRestantesCantidad
+            // 
+            this.lblTurnosRestantesCantidad.AutoSize = true;
+            this.lblTurnosRestantesCantidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnosRestantesCantidad.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTurnosRestantesCantidad.Location = new System.Drawing.Point(486, 503);
+            this.lblTurnosRestantesCantidad.Name = "lblTurnosRestantesCantidad";
+            this.lblTurnosRestantesCantidad.Size = new System.Drawing.Size(17, 19);
+            this.lblTurnosRestantesCantidad.TabIndex = 53;
+            this.lblTurnosRestantesCantidad.Text = "8";
             // 
             // lblTurnosRestantes
             // 
             this.lblTurnosRestantes.AutoSize = true;
-            this.lblTurnosRestantes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnosRestantes.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnosRestantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTurnosRestantes.Location = new System.Drawing.Point(508, 662);
+            this.lblTurnosRestantes.Location = new System.Drawing.Point(365, 503);
             this.lblTurnosRestantes.Name = "lblTurnosRestantes";
-            this.lblTurnosRestantes.Size = new System.Drawing.Size(154, 22);
+            this.lblTurnosRestantes.Size = new System.Drawing.Size(125, 19);
             this.lblTurnosRestantes.TabIndex = 51;
             this.lblTurnosRestantes.Text = "Turnos Restantes:";
             // 
             // lblTiempo
             // 
             this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiempo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTiempo.Location = new System.Drawing.Point(415, 662);
+            this.lblTiempo.Location = new System.Drawing.Point(287, 503);
             this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(55, 22);
+            this.lblTiempo.Size = new System.Drawing.Size(45, 19);
             this.lblTiempo.TabIndex = 50;
             this.lblTiempo.Text = "00:01";
             // 
             // lblTurnoJugador
             // 
             this.lblTurnoJugador.AutoSize = true;
-            this.lblTurnoJugador.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurnoJugador.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTurnoJugador.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTurnoJugador.Location = new System.Drawing.Point(193, 662);
+            this.lblTurnoJugador.Location = new System.Drawing.Point(103, 503);
             this.lblTurnoJugador.Name = "lblTurnoJugador";
-            this.lblTurnoJugador.Size = new System.Drawing.Size(170, 22);
+            this.lblTurnoJugador.Size = new System.Drawing.Size(140, 19);
             this.lblTurnoJugador.TabIndex = 49;
             this.lblTurnoJugador.Text = "Turno de Jugador 1";
             // 
             // lblRestantes
             // 
             this.lblRestantes.AutoSize = true;
-            this.lblRestantes.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestantes.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestantes.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRestantes.Location = new System.Drawing.Point(18, 662);
+            this.lblRestantes.Location = new System.Drawing.Point(3, 503);
             this.lblRestantes.Name = "lblRestantes";
-            this.lblRestantes.Size = new System.Drawing.Size(98, 22);
+            this.lblRestantes.Size = new System.Drawing.Size(92, 19);
             this.lblRestantes.TabIndex = 48;
-            this.lblRestantes.Text = "Restantes: ";
+            this.lblRestantes.Text = "Restantes: 3 ";
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(590, 627);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(447, 468);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(88, 32);
             this.btnSalir.TabIndex = 4;
@@ -207,10 +218,10 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.Location = new System.Drawing.Point(403, 627);
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(302, 468);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(101, 32);
+            this.btnConfirmar.Size = new System.Drawing.Size(92, 32);
             this.btnConfirmar.TabIndex = 3;
             this.btnConfirmar.Text = "CONFIRMAR";
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -218,10 +229,10 @@
             // 
             // btnTirar
             // 
-            this.btnTirar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTirar.Location = new System.Drawing.Point(234, 627);
+            this.btnTirar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTirar.Location = new System.Drawing.Point(175, 468);
             this.btnTirar.Name = "btnTirar";
-            this.btnTirar.Size = new System.Drawing.Size(88, 32);
+            this.btnTirar.Size = new System.Drawing.Size(86, 32);
             this.btnTirar.TabIndex = 2;
             this.btnTirar.Text = "TIRAR";
             this.btnTirar.UseVisualStyleBackColor = true;
@@ -229,10 +240,10 @@
             // 
             // btnGuardarSalir
             // 
-            this.btnGuardarSalir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarSalir.Location = new System.Drawing.Point(12, 627);
+            this.btnGuardarSalir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarSalir.Location = new System.Drawing.Point(3, 468);
             this.btnGuardarSalir.Name = "btnGuardarSalir";
-            this.btnGuardarSalir.Size = new System.Drawing.Size(154, 32);
+            this.btnGuardarSalir.Size = new System.Drawing.Size(135, 32);
             this.btnGuardarSalir.TabIndex = 1;
             this.btnGuardarSalir.Text = "GUARDAR Y SALIR";
             this.btnGuardarSalir.UseVisualStyleBackColor = true;
@@ -243,7 +254,7 @@
             this.lblBloqueadoDadoCinco.AutoSize = true;
             this.lblBloqueadoDadoCinco.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloqueadoDadoCinco.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBloqueadoDadoCinco.Location = new System.Drawing.Point(587, 594);
+            this.lblBloqueadoDadoCinco.Location = new System.Drawing.Point(472, 440);
             this.lblBloqueadoDadoCinco.Name = "lblBloqueadoDadoCinco";
             this.lblBloqueadoDadoCinco.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoCinco.TabIndex = 43;
@@ -255,7 +266,7 @@
             this.lblBloqueadoDadoCuatro.AutoSize = true;
             this.lblBloqueadoDadoCuatro.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloqueadoDadoCuatro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBloqueadoDadoCuatro.Location = new System.Drawing.Point(431, 594);
+            this.lblBloqueadoDadoCuatro.Location = new System.Drawing.Point(366, 440);
             this.lblBloqueadoDadoCuatro.Name = "lblBloqueadoDadoCuatro";
             this.lblBloqueadoDadoCuatro.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoCuatro.TabIndex = 42;
@@ -267,7 +278,7 @@
             this.lblBloqueadoDadoTres.AutoSize = true;
             this.lblBloqueadoDadoTres.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloqueadoDadoTres.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBloqueadoDadoTres.Location = new System.Drawing.Point(290, 594);
+            this.lblBloqueadoDadoTres.Location = new System.Drawing.Point(241, 440);
             this.lblBloqueadoDadoTres.Name = "lblBloqueadoDadoTres";
             this.lblBloqueadoDadoTres.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoTres.TabIndex = 41;
@@ -279,7 +290,7 @@
             this.lblBloqueadoDadoDos.AutoSize = true;
             this.lblBloqueadoDadoDos.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloqueadoDadoDos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBloqueadoDadoDos.Location = new System.Drawing.Point(150, 594);
+            this.lblBloqueadoDadoDos.Location = new System.Drawing.Point(129, 440);
             this.lblBloqueadoDadoDos.Name = "lblBloqueadoDadoDos";
             this.lblBloqueadoDadoDos.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoDos.TabIndex = 40;
@@ -291,7 +302,7 @@
             this.lblBloqueadoDadoUno.AutoSize = true;
             this.lblBloqueadoDadoUno.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBloqueadoDadoUno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBloqueadoDadoUno.Location = new System.Drawing.Point(19, 594);
+            this.lblBloqueadoDadoUno.Location = new System.Drawing.Point(13, 440);
             this.lblBloqueadoDadoUno.Name = "lblBloqueadoDadoUno";
             this.lblBloqueadoDadoUno.Size = new System.Drawing.Size(73, 16);
             this.lblBloqueadoDadoUno.TabIndex = 39;
@@ -302,9 +313,9 @@
             // 
             this.dado5img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dado5img.Enabled = false;
-            this.dado5img.Location = new System.Drawing.Point(585, 516);
+            this.dado5img.Location = new System.Drawing.Point(475, 377);
             this.dado5img.Name = "dado5img";
-            this.dado5img.Size = new System.Drawing.Size(75, 75);
+            this.dado5img.Size = new System.Drawing.Size(60, 60);
             this.dado5img.TabIndex = 38;
             this.dado5img.TabStop = false;
             this.dado5img.Click += new System.EventHandler(this.pictureBoxCincoBloqueado_Click);
@@ -313,9 +324,9 @@
             // 
             this.dado4img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dado4img.Enabled = false;
-            this.dado4img.Location = new System.Drawing.Point(429, 516);
+            this.dado4img.Location = new System.Drawing.Point(369, 377);
             this.dado4img.Name = "dado4img";
-            this.dado4img.Size = new System.Drawing.Size(75, 75);
+            this.dado4img.Size = new System.Drawing.Size(60, 60);
             this.dado4img.TabIndex = 37;
             this.dado4img.TabStop = false;
             this.dado4img.Click += new System.EventHandler(this.pictureBoxCautroBloqueado_Click);
@@ -324,9 +335,9 @@
             // 
             this.dado3img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dado3img.Enabled = false;
-            this.dado3img.Location = new System.Drawing.Point(288, 516);
+            this.dado3img.Location = new System.Drawing.Point(244, 377);
             this.dado3img.Name = "dado3img";
-            this.dado3img.Size = new System.Drawing.Size(75, 75);
+            this.dado3img.Size = new System.Drawing.Size(60, 60);
             this.dado3img.TabIndex = 36;
             this.dado3img.TabStop = false;
             this.dado3img.Click += new System.EventHandler(this.pictureBoxTresBloqueado_Click);
@@ -335,9 +346,9 @@
             // 
             this.dado2img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dado2img.Enabled = false;
-            this.dado2img.Location = new System.Drawing.Point(148, 516);
+            this.dado2img.Location = new System.Drawing.Point(132, 377);
             this.dado2img.Name = "dado2img";
-            this.dado2img.Size = new System.Drawing.Size(75, 75);
+            this.dado2img.Size = new System.Drawing.Size(60, 60);
             this.dado2img.TabIndex = 35;
             this.dado2img.TabStop = false;
             this.dado2img.Click += new System.EventHandler(this.pictureBoxDosBloqueado_Click);
@@ -346,9 +357,9 @@
             // 
             this.dado1img.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dado1img.Enabled = false;
-            this.dado1img.Location = new System.Drawing.Point(17, 516);
+            this.dado1img.Location = new System.Drawing.Point(15, 377);
             this.dado1img.Name = "dado1img";
-            this.dado1img.Size = new System.Drawing.Size(75, 75);
+            this.dado1img.Size = new System.Drawing.Size(60, 60);
             this.dado1img.TabIndex = 34;
             this.dado1img.TabStop = false;
             this.dado1img.Click += new System.EventHandler(this.pictureBoxUnoBloqueado_Click);
@@ -358,7 +369,7 @@
             this.lblPuntoJugador2.AutoSize = true;
             this.lblPuntoJugador2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntoJugador2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPuntoJugador2.Location = new System.Drawing.Point(627, 471);
+            this.lblPuntoJugador2.Location = new System.Drawing.Point(533, 352);
             this.lblPuntoJugador2.Name = "lblPuntoJugador2";
             this.lblPuntoJugador2.Size = new System.Drawing.Size(20, 22);
             this.lblPuntoJugador2.TabIndex = 33;
@@ -369,7 +380,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(524, 471);
+            this.label3.Location = new System.Drawing.Point(430, 352);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 22);
             this.label3.TabIndex = 21;
@@ -380,7 +391,7 @@
             this.lblPuntosJugador1.AutoSize = true;
             this.lblPuntosJugador1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntosJugador1.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPuntosJugador1.Location = new System.Drawing.Point(122, 471);
+            this.lblPuntosJugador1.Location = new System.Drawing.Point(103, 352);
             this.lblPuntosJugador1.Name = "lblPuntosJugador1";
             this.lblPuntosJugador1.Size = new System.Drawing.Size(20, 22);
             this.lblPuntosJugador1.TabIndex = 20;
@@ -391,7 +402,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(13, 471);
+            this.label1.Location = new System.Drawing.Point(5, 352);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 22);
             this.label1.TabIndex = 19;
@@ -420,9 +431,9 @@
             this.panelDeValores.Controls.Add(this.lblCantidadUno);
             this.panelDeValores.Controls.Add(this.lblCantidadDos);
             this.panelDeValores.Controls.Add(this.lblCantidadTres);
-            this.panelDeValores.Location = new System.Drawing.Point(234, 28);
+            this.panelDeValores.Location = new System.Drawing.Point(153, 3);
             this.panelDeValores.Name = "panelDeValores";
-            this.panelDeValores.Size = new System.Drawing.Size(448, 418);
+            this.panelDeValores.Size = new System.Drawing.Size(400, 346);
             this.panelDeValores.TabIndex = 18;
             // 
             // lblCantidadLibre
@@ -430,7 +441,7 @@
             this.lblCantidadLibre.AutoSize = true;
             this.lblCantidadLibre.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadLibre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadLibre.Location = new System.Drawing.Point(406, 305);
+            this.lblCantidadLibre.Location = new System.Drawing.Point(286, 294);
             this.lblCantidadLibre.Name = "lblCantidadLibre";
             this.lblCantidadLibre.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadLibre.TabIndex = 32;
@@ -441,7 +452,7 @@
             this.lblCantidadGenerala.AutoSize = true;
             this.lblCantidadGenerala.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadGenerala.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadGenerala.Location = new System.Drawing.Point(406, 229);
+            this.lblCantidadGenerala.Location = new System.Drawing.Point(286, 217);
             this.lblCantidadGenerala.Name = "lblCantidadGenerala";
             this.lblCantidadGenerala.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadGenerala.TabIndex = 31;
@@ -452,7 +463,7 @@
             this.lblCantidadEscalera.AutoSize = true;
             this.lblCantidadEscalera.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadEscalera.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadEscalera.Location = new System.Drawing.Point(406, 158);
+            this.lblCantidadEscalera.Location = new System.Drawing.Point(290, 149);
             this.lblCantidadEscalera.Name = "lblCantidadEscalera";
             this.lblCantidadEscalera.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadEscalera.TabIndex = 30;
@@ -463,7 +474,7 @@
             this.lblCantidadFull.AutoSize = true;
             this.lblCantidadFull.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadFull.Location = new System.Drawing.Point(406, 86);
+            this.lblCantidadFull.Location = new System.Drawing.Point(286, 86);
             this.lblCantidadFull.Name = "lblCantidadFull";
             this.lblCantidadFull.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadFull.TabIndex = 29;
@@ -474,7 +485,7 @@
             this.lblCantidadPoker.AutoSize = true;
             this.lblCantidadPoker.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadPoker.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadPoker.Location = new System.Drawing.Point(406, 13);
+            this.lblCantidadPoker.Location = new System.Drawing.Point(286, 28);
             this.lblCantidadPoker.Name = "lblCantidadPoker";
             this.lblCantidadPoker.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadPoker.TabIndex = 28;
@@ -485,7 +496,7 @@
             this.lblLibre.AutoSize = true;
             this.lblLibre.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLibre.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLibre.Location = new System.Drawing.Point(290, 305);
+            this.lblLibre.Location = new System.Drawing.Point(202, 294);
             this.lblLibre.Name = "lblLibre";
             this.lblLibre.Size = new System.Drawing.Size(51, 22);
             this.lblLibre.TabIndex = 27;
@@ -496,7 +507,7 @@
             this.lblGenerala.AutoSize = true;
             this.lblGenerala.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenerala.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblGenerala.Location = new System.Drawing.Point(290, 229);
+            this.lblGenerala.Location = new System.Drawing.Point(202, 217);
             this.lblGenerala.Name = "lblGenerala";
             this.lblGenerala.Size = new System.Drawing.Size(80, 22);
             this.lblGenerala.TabIndex = 26;
@@ -507,7 +518,7 @@
             this.lblEscalera.AutoSize = true;
             this.lblEscalera.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEscalera.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEscalera.Location = new System.Drawing.Point(290, 158);
+            this.lblEscalera.Location = new System.Drawing.Point(202, 149);
             this.lblEscalera.Name = "lblEscalera";
             this.lblEscalera.Size = new System.Drawing.Size(74, 22);
             this.lblEscalera.TabIndex = 25;
@@ -518,7 +529,7 @@
             this.lblFull.AutoSize = true;
             this.lblFull.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFull.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFull.Location = new System.Drawing.Point(290, 86);
+            this.lblFull.Location = new System.Drawing.Point(202, 86);
             this.lblFull.Name = "lblFull";
             this.lblFull.Size = new System.Drawing.Size(39, 22);
             this.lblFull.TabIndex = 24;
@@ -529,7 +540,7 @@
             this.lblPoker.AutoSize = true;
             this.lblPoker.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPoker.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPoker.Location = new System.Drawing.Point(290, 13);
+            this.lblPoker.Location = new System.Drawing.Point(202, 28);
             this.lblPoker.Name = "lblPoker";
             this.lblPoker.Size = new System.Drawing.Size(58, 22);
             this.lblPoker.TabIndex = 23;
@@ -539,9 +550,9 @@
             // 
             this.pictureBoxLibre.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Libre;
             this.pictureBoxLibre.InitialImage = null;
-            this.pictureBoxLibre.Location = new System.Drawing.Point(159, 295);
+            this.pictureBoxLibre.Location = new System.Drawing.Point(109, 278);
             this.pictureBoxLibre.Name = "pictureBoxLibre";
-            this.pictureBoxLibre.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxLibre.Size = new System.Drawing.Size(70, 47);
             this.pictureBoxLibre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLibre.TabIndex = 22;
             this.pictureBoxLibre.TabStop = false;
@@ -551,9 +562,9 @@
             // 
             this.pictureBoxGenerala.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Generala;
             this.pictureBoxGenerala.InitialImage = null;
-            this.pictureBoxGenerala.Location = new System.Drawing.Point(159, 218);
+            this.pictureBoxGenerala.Location = new System.Drawing.Point(109, 204);
             this.pictureBoxGenerala.Name = "pictureBoxGenerala";
-            this.pictureBoxGenerala.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxGenerala.Size = new System.Drawing.Size(70, 47);
             this.pictureBoxGenerala.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxGenerala.TabIndex = 21;
             this.pictureBoxGenerala.TabStop = false;
@@ -563,9 +574,9 @@
             // 
             this.pictureBoxEscalera.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Escalera;
             this.pictureBoxEscalera.InitialImage = null;
-            this.pictureBoxEscalera.Location = new System.Drawing.Point(159, 141);
+            this.pictureBoxEscalera.Location = new System.Drawing.Point(109, 133);
             this.pictureBoxEscalera.Name = "pictureBoxEscalera";
-            this.pictureBoxEscalera.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxEscalera.Size = new System.Drawing.Size(70, 47);
             this.pictureBoxEscalera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxEscalera.TabIndex = 20;
             this.pictureBoxEscalera.TabStop = false;
@@ -575,9 +586,9 @@
             // 
             this.pictureBoxFull.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Full;
             this.pictureBoxFull.InitialImage = null;
-            this.pictureBoxFull.Location = new System.Drawing.Point(159, 72);
+            this.pictureBoxFull.Location = new System.Drawing.Point(109, 74);
             this.pictureBoxFull.Name = "pictureBoxFull";
-            this.pictureBoxFull.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxFull.Size = new System.Drawing.Size(70, 47);
             this.pictureBoxFull.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFull.TabIndex = 19;
             this.pictureBoxFull.TabStop = false;
@@ -587,9 +598,9 @@
             // 
             this.pictureBoxPoker.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.Poker;
             this.pictureBoxPoker.InitialImage = null;
-            this.pictureBoxPoker.Location = new System.Drawing.Point(159, 0);
+            this.pictureBoxPoker.Location = new System.Drawing.Point(109, 10);
             this.pictureBoxPoker.Name = "pictureBoxPoker";
-            this.pictureBoxPoker.Size = new System.Drawing.Size(94, 50);
+            this.pictureBoxPoker.Size = new System.Drawing.Size(70, 47);
             this.pictureBoxPoker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPoker.TabIndex = 18;
             this.pictureBoxPoker.TabStop = false;
@@ -600,7 +611,7 @@
             this.lblCantidadCinco.AutoSize = true;
             this.lblCantidadCinco.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadCinco.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadCinco.Location = new System.Drawing.Point(3, 305);
+            this.lblCantidadCinco.Location = new System.Drawing.Point(3, 243);
             this.lblCantidadCinco.Name = "lblCantidadCinco";
             this.lblCantidadCinco.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadCinco.TabIndex = 16;
@@ -611,7 +622,7 @@
             this.lblCantidadSeis.AutoSize = true;
             this.lblCantidadSeis.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadSeis.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadSeis.Location = new System.Drawing.Point(3, 380);
+            this.lblCantidadSeis.Location = new System.Drawing.Point(3, 303);
             this.lblCantidadSeis.Name = "lblCantidadSeis";
             this.lblCantidadSeis.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadSeis.TabIndex = 17;
@@ -622,7 +633,7 @@
             this.lblCantidadCuatro.AutoSize = true;
             this.lblCantidadCuatro.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadCuatro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadCuatro.Location = new System.Drawing.Point(3, 229);
+            this.lblCantidadCuatro.Location = new System.Drawing.Point(3, 183);
             this.lblCantidadCuatro.Name = "lblCantidadCuatro";
             this.lblCantidadCuatro.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadCuatro.TabIndex = 15;
@@ -633,7 +644,7 @@
             this.lblCantidadUno.AutoSize = true;
             this.lblCantidadUno.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadUno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadUno.Location = new System.Drawing.Point(3, 13);
+            this.lblCantidadUno.Location = new System.Drawing.Point(3, 25);
             this.lblCantidadUno.Name = "lblCantidadUno";
             this.lblCantidadUno.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadUno.TabIndex = 12;
@@ -644,7 +655,7 @@
             this.lblCantidadDos.AutoSize = true;
             this.lblCantidadDos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadDos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadDos.Location = new System.Drawing.Point(3, 86);
+            this.lblCantidadDos.Location = new System.Drawing.Point(3, 74);
             this.lblCantidadDos.Name = "lblCantidadDos";
             this.lblCantidadDos.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadDos.TabIndex = 13;
@@ -655,7 +666,7 @@
             this.lblCantidadTres.AutoSize = true;
             this.lblCantidadTres.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadTres.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCantidadTres.Location = new System.Drawing.Point(3, 158);
+            this.lblCantidadTres.Location = new System.Drawing.Point(3, 125);
             this.lblCantidadTres.Name = "lblCantidadTres";
             this.lblCantidadTres.Size = new System.Drawing.Size(20, 22);
             this.lblCantidadTres.TabIndex = 14;
@@ -666,7 +677,7 @@
             this.lblSeis.AutoSize = true;
             this.lblSeis.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeis.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSeis.Location = new System.Drawing.Point(87, 408);
+            this.lblSeis.Location = new System.Drawing.Point(58, 306);
             this.lblSeis.Name = "lblSeis";
             this.lblSeis.Size = new System.Drawing.Size(42, 22);
             this.lblSeis.TabIndex = 11;
@@ -677,7 +688,7 @@
             this.lblCinco.AutoSize = true;
             this.lblCinco.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCinco.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCinco.Location = new System.Drawing.Point(87, 333);
+            this.lblCinco.Location = new System.Drawing.Point(55, 246);
             this.lblCinco.Name = "lblCinco";
             this.lblCinco.Size = new System.Drawing.Size(55, 22);
             this.lblCinco.TabIndex = 10;
@@ -688,7 +699,7 @@
             this.lblCuatro.AutoSize = true;
             this.lblCuatro.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuatro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCuatro.Location = new System.Drawing.Point(87, 257);
+            this.lblCuatro.Location = new System.Drawing.Point(58, 186);
             this.lblCuatro.Name = "lblCuatro";
             this.lblCuatro.Size = new System.Drawing.Size(65, 22);
             this.lblCuatro.TabIndex = 9;
@@ -699,7 +710,7 @@
             this.lblTres.AutoSize = true;
             this.lblTres.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTres.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTres.Location = new System.Drawing.Point(87, 186);
+            this.lblTres.Location = new System.Drawing.Point(58, 128);
             this.lblTres.Name = "lblTres";
             this.lblTres.Size = new System.Drawing.Size(44, 22);
             this.lblTres.TabIndex = 8;
@@ -710,7 +721,7 @@
             this.lblDos.AutoSize = true;
             this.lblDos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDos.Location = new System.Drawing.Point(87, 114);
+            this.lblDos.Location = new System.Drawing.Point(58, 77);
             this.lblDos.Name = "lblDos";
             this.lblDos.Size = new System.Drawing.Size(42, 22);
             this.lblDos.TabIndex = 7;
@@ -721,7 +732,7 @@
             this.lblUno.AutoSize = true;
             this.lblUno.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUno.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUno.Location = new System.Drawing.Point(87, 41);
+            this.lblUno.Location = new System.Drawing.Point(57, 28);
             this.lblUno.Name = "lblUno";
             this.lblUno.Size = new System.Drawing.Size(43, 22);
             this.lblUno.TabIndex = 6;
@@ -731,9 +742,9 @@
             // 
             this.pictureBoxSeis.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado6;
             this.pictureBoxSeis.InitialImage = null;
-            this.pictureBoxSeis.Location = new System.Drawing.Point(13, 396);
+            this.pictureBoxSeis.Location = new System.Drawing.Point(12, 297);
             this.pictureBoxSeis.Name = "pictureBoxSeis";
-            this.pictureBoxSeis.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxSeis.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxSeis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSeis.TabIndex = 5;
             this.pictureBoxSeis.TabStop = false;
@@ -743,9 +754,9 @@
             // 
             this.pictureBoxCinco.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado5;
             this.pictureBoxCinco.InitialImage = null;
-            this.pictureBoxCinco.Location = new System.Drawing.Point(13, 323);
+            this.pictureBoxCinco.Location = new System.Drawing.Point(12, 239);
             this.pictureBoxCinco.Name = "pictureBoxCinco";
-            this.pictureBoxCinco.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxCinco.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxCinco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCinco.TabIndex = 4;
             this.pictureBoxCinco.TabStop = false;
@@ -755,9 +766,9 @@
             // 
             this.pictureBoxCuatro.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado4;
             this.pictureBoxCuatro.InitialImage = null;
-            this.pictureBoxCuatro.Location = new System.Drawing.Point(13, 246);
+            this.pictureBoxCuatro.Location = new System.Drawing.Point(12, 179);
             this.pictureBoxCuatro.Name = "pictureBoxCuatro";
-            this.pictureBoxCuatro.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxCuatro.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxCuatro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCuatro.TabIndex = 3;
             this.pictureBoxCuatro.TabStop = false;
@@ -767,9 +778,9 @@
             // 
             this.pictureBoxTres.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado3;
             this.pictureBoxTres.InitialImage = null;
-            this.pictureBoxTres.Location = new System.Drawing.Point(13, 169);
+            this.pictureBoxTres.Location = new System.Drawing.Point(12, 125);
             this.pictureBoxTres.Name = "pictureBoxTres";
-            this.pictureBoxTres.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxTres.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxTres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTres.TabIndex = 2;
             this.pictureBoxTres.TabStop = false;
@@ -779,9 +790,9 @@
             // 
             this.pictureBoxDos.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado2;
             this.pictureBoxDos.InitialImage = null;
-            this.pictureBoxDos.Location = new System.Drawing.Point(12, 100);
+            this.pictureBoxDos.Location = new System.Drawing.Point(12, 68);
             this.pictureBoxDos.Name = "pictureBoxDos";
-            this.pictureBoxDos.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxDos.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxDos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDos.TabIndex = 1;
             this.pictureBoxDos.TabStop = false;
@@ -791,31 +802,20 @@
             // 
             this.pictureBoxUno.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.dado1;
             this.pictureBoxUno.InitialImage = null;
-            this.pictureBoxUno.Location = new System.Drawing.Point(12, 28);
+            this.pictureBoxUno.Location = new System.Drawing.Point(12, 13);
             this.pictureBoxUno.Name = "pictureBoxUno";
-            this.pictureBoxUno.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxUno.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxUno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxUno.TabIndex = 0;
             this.pictureBoxUno.TabStop = false;
             this.pictureBoxUno.Click += new System.EventHandler(this.pictureBoxUno_Click);
-            // 
-            // lblTurnosRestantesCantidad
-            // 
-            this.lblTurnosRestantesCantidad.AutoSize = true;
-            this.lblTurnosRestantesCantidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosRestantesCantidad.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTurnosRestantesCantidad.Location = new System.Drawing.Point(658, 662);
-            this.lblTurnosRestantesCantidad.Name = "lblTurnosRestantesCantidad";
-            this.lblTurnosRestantesCantidad.Size = new System.Drawing.Size(20, 22);
-            this.lblTurnosRestantesCantidad.TabIndex = 53;
-            this.lblTurnosRestantesCantidad.Text = "8";
             // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(59)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(684, 708);
+            this.ClientSize = new System.Drawing.Size(560, 528);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Juego";

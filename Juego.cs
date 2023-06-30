@@ -13,8 +13,7 @@ namespace Hamer.Thomas.SegundoParcial
     {
         #region Atributos
 
-        private Random rnd = new Random();
-        public static List<Dados> Listadados = Dados.GetDados();
+        private static List<Dados> Listadados = Dados.GetDados();
         private BaseDeDatos ado = new BaseDeDatos();
         private int contador = 0;
         private int contadorTurnos;
@@ -27,8 +26,10 @@ namespace Hamer.Thomas.SegundoParcial
         private int idSala;
         private int j1Puntos;
         private int j2Puntos;
+        private bool pictureHabilitado = false;
         private bool poderCerrar = false;
         private int puntos = 0;
+        private Random rnd = new Random();
         private List<string> TachadosJ1 = new List<string>();
         private List<string> TachadosJ2 = new List<string>();
         private DateTime tiempo = new DateTime();
@@ -159,7 +160,7 @@ namespace Hamer.Thomas.SegundoParcial
                         break;
 
                     case 6:
-                        dado.Image = Properties.Resources.dado6;
+                        dado.Image = Image.FromFile("dado6.png");
                         break;
                 }
             }
@@ -243,6 +244,11 @@ namespace Hamer.Thomas.SegundoParcial
                 {
                     item.Text = "0";
                 }
+                lblPoker.Text = "Poker";
+                lblFull.Text = "Full";
+                lblEscalera.Text = "Escalera";
+                lblGenerala.Text = "Generala";
+                lblLibre.Text = "Libre";
             }
             else
             {
@@ -342,6 +348,7 @@ namespace Hamer.Thomas.SegundoParcial
             dado3img.Enabled = true;
             dado4img.Enabled = true;
             dado5img.Enabled = true;
+            pictureHabilitado = true;
         }
 
         /// <summary>
@@ -551,7 +558,8 @@ namespace Hamer.Thomas.SegundoParcial
             if (J1Puntos > J2Puntos)
             {
                 MessageBox.Show("El Ganador es el Jugador 1.");
-                ganoJ1 = true; ;
+                ganoJ1 = true;
+                ado.ActualizarEstadisticasVictoria(idCreador);
             }
             else
             {
@@ -559,6 +567,7 @@ namespace Hamer.Thomas.SegundoParcial
                 {
                     MessageBox.Show("El Ganador es el Jugador 2.");
                     ganoJ1 = false;
+                    ado.ActualizarEstadisticasDerrota(idCreador);
                 }
                 else
                 {
@@ -818,12 +827,15 @@ namespace Hamer.Thomas.SegundoParcial
         /// eventos. Se usa comúnmente como un parámetro para los controladores de eventos.</param>
         private void pictureBoxEscalera_Click(object sender, EventArgs e)
         {
-            RestaurarColores();
-            TacharCuandoClickPB(turnoJugador);
-            tocoBoton = true;
-            puntos = Escalera();
-            ultimoUsado = "Escalera";
-            lblCantidadEscalera.ForeColor = Color.Yellow;
+            if (pictureHabilitado)
+            {
+                RestaurarColores();
+                TacharCuandoClickPB(turnoJugador);
+                tocoBoton = true;
+                puntos = Escalera();
+                ultimoUsado = "Escalera";
+                lblCantidadEscalera.ForeColor = Color.Yellow;
+            }
         }
 
         /// <summary>
@@ -839,12 +851,15 @@ namespace Hamer.Thomas.SegundoParcial
         /// pictureBoxFull_Click, que se llama cuando el usuario hace clic</param>
         private void pictureBoxFull_Click(object sender, EventArgs e)
         {
-            RestaurarColores();
-            TacharCuandoClickPB(turnoJugador);
-            tocoBoton = true;
-            puntos = Full();
-            ultimoUsado = "Full";
-            lblCantidadFull.ForeColor = Color.Yellow;
+            if (pictureHabilitado)
+            {
+                RestaurarColores();
+                TacharCuandoClickPB(turnoJugador);
+                tocoBoton = true;
+                puntos = Full();
+                ultimoUsado = "Full";
+                lblCantidadFull.ForeColor = Color.Yellow;
+            }
         }
 
         /// <summary>
@@ -859,12 +874,15 @@ namespace Hamer.Thomas.SegundoParcial
         /// pictureBoxGenerala_Click, que se llama cuando el usuario</param>
         private void pictureBoxGenerala_Click(object sender, EventArgs e)
         {
-            RestaurarColores();
-            TacharCuandoClickPB(turnoJugador);
-            tocoBoton = true;
-            puntos = Generala();
-            ultimoUsado = "Generala";
-            lblCantidadGenerala.ForeColor = Color.Yellow;
+            if (pictureHabilitado)
+            {
+                RestaurarColores();
+                TacharCuandoClickPB(turnoJugador);
+                tocoBoton = true;
+                puntos = Generala();
+                ultimoUsado = "Generala";
+                lblCantidadGenerala.ForeColor = Color.Yellow;
+            }
         }
 
         /// <summary>
@@ -880,12 +898,15 @@ namespace Hamer.Thomas.SegundoParcial
         /// pictureBoxLibre_Click, que se llama cuando el usuario</param>
         private void pictureBoxLibre_Click(object sender, EventArgs e)
         {
-            RestaurarColores();
-            TacharCuandoClickPB(turnoJugador);
-            tocoBoton = true;
-            puntos = Libre();
-            ultimoUsado = "Libre";
-            lblCantidadLibre.ForeColor = Color.Yellow;
+            if (pictureHabilitado)
+            {
+                RestaurarColores();
+                TacharCuandoClickPB(turnoJugador);
+                tocoBoton = true;
+                puntos = Libre();
+                ultimoUsado = "Libre";
+                lblCantidadLibre.ForeColor = Color.Yellow;
+            }
         }
 
         /// <summary>
@@ -900,12 +921,15 @@ namespace Hamer.Thomas.SegundoParcial
         /// pictureBoxPoker_Click, que se llama cuando el usuario</param>
         private void pictureBoxPoker_Click(object sender, EventArgs e)
         {
-            RestaurarColores();
-            TacharCuandoClickPB(turnoJugador);
-            tocoBoton = true;
-            puntos = Poker();
-            ultimoUsado = "Poker";
-            lblCantidadPoker.ForeColor = Color.Yellow;
+            if (pictureHabilitado)
+            {
+                RestaurarColores();
+                TacharCuandoClickPB(turnoJugador);
+                tocoBoton = true;
+                puntos = Poker();
+                ultimoUsado = "Poker";
+                lblCantidadPoker.ForeColor = Color.Yellow;
+            }
         }
 
         /// <summary>

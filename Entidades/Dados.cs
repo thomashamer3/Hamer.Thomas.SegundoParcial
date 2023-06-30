@@ -50,8 +50,8 @@ namespace Entidades
             Dados primerDado = new Dados(0, true);
             Dados segundoDado = new Dados(0, true);
             Dados tercerDado = new Dados(0, true);
-            Dados cuartoDado = new Dados(-2, true);
-            Dados quintoDado = new Dados(-1, true);
+            Dados cuartoDado = new Dados(0, true);
+            Dados quintoDado = new Dados(0, true);
 
             listaDados.Add(primerDado);
             listaDados.Add(segundoDado);

@@ -13,8 +13,8 @@
 
         public Usuarios()
         {
-            this.nombreUsuario = "";
-            this.clave = "";
+            this.nombreUsuario = string.Empty;
+            this.clave = string.Empty;
         }
 
         public Usuarios(string nombreUsuario, string clave) : this()

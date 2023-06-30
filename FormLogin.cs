@@ -9,8 +9,9 @@ namespace Hamer.Thomas.SegundoParcial
     {
         #region Atributos
 
+        private BaseDeDatos ado = new BaseDeDatos();
+        private AdoUsuarios adoUsu = new AdoUsuarios();
         private bool poderCerrar = false;
-        private string usuarioIngresado;
 
         #endregion Atributos
 
@@ -39,23 +40,41 @@ namespace Hamer.Thomas.SegundoParcial
         /// controlador de eventos para el evento Click de un botón.</param>
         private void btn_Aceptar_Click(object sender, EventArgs e)
         {
-            BaseDeDatos ado = new BaseDeDatos();
-            AdoUsuarios adoUsu = new AdoUsuarios();
             List<Usuarios> lista = adoUsu.Selecionar();
+
+            Usuarios usuarioEncontrado = null;
+            bool claveCorrecta = false;
 
             foreach (Usuarios item in lista)
             {
-                if (item.NombreUsuario == txtUsuario.Text && item.Clave == txtClave.Text)
+                if (item.NombreUsuario == txtUsuario.Text)
                 {
-                    SalasPartida FormularioSalas = new SalasPartida();
-                    FormularioSalas.usuarioIngresado = item;
-                    FormularioSalas.ShowDialog();
-                    Hide();
+                    usuarioEncontrado = item;
+
+                    if (item.Clave == txtClave.Text)
+                    {
+                        claveCorrecta = true;
+                        break;
+                    }
                 }
-                else
-                {
-                    lblIncorrecto.Visible = true;
-                }
+            }
+
+            if (claveCorrecta)
+            {
+                SalasPartida FormularioSalas = new SalasPartida();
+                FormularioSalas.usuarioIngresado = usuarioEncontrado;
+                FormularioSalas.ShowDialog();
+                Hide();
+            }
+            else if (usuarioEncontrado != null)
+            {
+                lblIncorrecto.Text = "Clave Incorrecta";
+                lblIncorrecto.Visible = true;
+            }
+            else
+            {
+                lblIncorrecto.Text = "Usuario y Clave No Registrados";
+                lblIncorrecto.Visible = true;
             }
         }
 
@@ -70,8 +89,53 @@ namespace Hamer.Thomas.SegundoParcial
         /// método del controlador de eventos btn_Registrarse_Click, que se llama</param>
         private void btn_Registrarse_Click(object sender, EventArgs e)
         {
-            Registro registro = new Registro();
-            registro.ShowDialog();
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas registrar el usuario?",
+                "Confirmar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Usuarios newUser = new Usuarios();
+                newUser.NombreUsuario = txtUsuario.Text;
+                newUser.Clave = txtClave.Text;
+
+                List<Usuarios> lista = adoUsu.Selecionar();
+                bool usuarioExistente = false;
+                bool claveExistente = false;
+
+                foreach (Usuarios item in lista)
+                {
+                    if (item.NombreUsuario == newUser.NombreUsuario)
+                    {
+                        usuarioExistente = true;
+
+                        if (item.Clave == newUser.Clave)
+                        {
+                            claveExistente = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (claveExistente && usuarioExistente)
+                {
+                    lblIncorrecto.Text = "El Usuario y la Clave ya están Registrados. Utilice otros datos.";
+                }
+                else if (usuarioExistente)
+                {
+                    lblIncorrecto.Text = "Este Usuario ya está Registrado. Utilice otro Nombre de Usuario.";
+                }
+                else
+                {
+                    Estadisticas newEstadistica = new Estadisticas();
+                    newEstadistica.NombreUsuario = txtUsuario.Text;
+
+                    ado.AgregarEstadistica(newEstadistica);
+                    ado.AgregarDato(newUser);
+                    lblIncorrecto.Text = "Usuario y Clave Registrados correctamente.";
+                }
+
+                lblIncorrecto.Visible = true;
+            }
         }
 
         /// <summary>
@@ -113,13 +177,10 @@ namespace Hamer.Thomas.SegundoParcial
         {
             BaseDeDatos ado = new BaseDeDatos();
 
-            if (ado.ProbarConexion())
+            if (ado.ProbarConexion() == false)
             {
-                MessageBox.Show("Se conectó!!!");
-            }
-            else
-            {
-                MessageBox.Show("No se conectó.");
+                MessageBox.Show("No se pudo Conectar a La Base de Datos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Environment.Exit(0);
             }
         }
     }

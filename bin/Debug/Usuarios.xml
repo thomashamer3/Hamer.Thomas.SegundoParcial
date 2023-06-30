@@ -24,4 +24,12 @@
     <Clave>12345678</Clave>
     <NombreUsuario>Manuel2023</NombreUsuario>
   </Usuarios>
+  <Usuarios>
+    <Clave>1010</Clave>
+    <NombreUsuario>JUANITO10</NombreUsuario>
+  </Usuarios>
+  <Usuarios>
+    <Clave>12345</Clave>
+    <NombreUsuario>crack</NombreUsuario>
+  </Usuarios>
 </ArrayOfUsuarios>

@@ -33,6 +33,64 @@ namespace Entidades
         #region Metodos
 
         /// <summary>
+        /// La función actualiza el campo "Partidas Jugadas" en la tabla "Estadistica" incrementándolo
+        /// en 1 para un valor específico de "Id".
+        /// </summary>
+        /// <param name="id">El parámetro id es un número entero que representa el identificador único
+        /// del registro de estadísticas que debe actualizarse.</param>
+        public void ActualizarEstadisticasDerrota(int id)
+        {
+            try
+            {
+                string query = "UPDATE Estadistica SET PartidasJugadas = PartidasJugadas + 1 WHERE Id = @Id";
+
+                using (SqlConnection connection = new SqlConnection(BaseDeDatos.cadenaConexion))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// La función actualiza las estadísticas de las victorias de un jugador incrementando el número
+        /// de juegos jugados y el número de juegos ganados.
+        /// </summary>
+        /// <param name="id">El parámetro id es el identificador único del jugador cuyas estadísticas se
+        /// están actualizando.</param>
+        public void ActualizarEstadisticasVictoria(int id)
+        {
+            try
+            {
+                string query = "UPDATE Estadistica SET PartidasJugadas = PartidasJugadas + 1, PartidasGanadas = PartidasGanadas + 1 WHERE Id = @Id";
+
+                using (SqlConnection connection = new SqlConnection(BaseDeDatos.cadenaConexion))
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        /// <summary>
         /// Este Metodo agrega un nuevo usuario a una base de datos si el usuario aún no existe.
         /// </summary>
         /// <param name="Usuarios">Una clase que representa a un usuario con propiedades como
@@ -580,6 +638,13 @@ namespace Entidades
             return lista;
         }
 
+        /// <summary>
+        /// La función "ProbarConexion" comprueba si se puede establecer una conexión a una base de
+        /// datos y devuelve un valor booleano que indica el éxito de la conexión.
+        /// </summary>
+        /// <returns>
+        /// El método devuelve un valor booleano, ya sea verdadero o falso.
+        /// </returns>
         public bool ProbarConexion()
         {
             bool rta = true;
@@ -631,9 +696,9 @@ namespace Entidades
 
                 while (lector.Read())
                 {
-                    item.Id = lector.GetInt32(0);
-                    item.PartidasJugadas = lector.GetInt32(1);
-                    item.PartidasGanadas = lector.GetInt32(2);
+                    item.PartidasJugadas = lector.GetInt32(0);
+                    item.PartidasGanadas = lector.GetInt32(1);
+                    item.Id = lector.GetInt32(2);
                 }
 
                 lector.Close();
