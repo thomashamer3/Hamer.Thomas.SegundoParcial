@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(59)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(710, 180);
+            this.ClientSize = new System.Drawing.Size(704, 157);
             this.Controls.Add(this.lblPorcentaje);
             this.Controls.Add(this.lblPorcentajeDeVictoria);
             this.Controls.Add(this.lblCantidadDePartidasGanadas);

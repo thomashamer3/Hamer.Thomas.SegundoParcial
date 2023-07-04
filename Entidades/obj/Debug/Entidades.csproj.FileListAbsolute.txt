@@ -16,3 +16,15 @@ C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.dll
 C:\Users\ElectronicG\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.pdb
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Entidades.dll
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Entidades.pdb
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\System.Data.SqlClient.dll
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\bin\Debug\System.Data.SqlClient.xml
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.dll
+C:\Users\User\Documents\GitHub\Hamer.Thomas.SegundoParcial\Entidades\obj\Debug\Entidades.pdb

@@ -71,26 +71,26 @@
             this.panelSalas.Controls.Add(this.DGVSalas);
             this.panelSalas.Controls.Add(this.lblNombreUsuario);
             this.panelSalas.Controls.Add(this.lblBienvenida);
-            this.panelSalas.Location = new System.Drawing.Point(12, -4);
+            this.panelSalas.Location = new System.Drawing.Point(2, -4);
             this.panelSalas.Name = "panelSalas";
-            this.panelSalas.Size = new System.Drawing.Size(856, 561);
+            this.panelSalas.Size = new System.Drawing.Size(812, 481);
             this.panelSalas.TabIndex = 0;
             // 
             // lblOrdenar
             // 
             this.lblOrdenar.AutoSize = true;
-            this.lblOrdenar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdenar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdenar.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOrdenar.Location = new System.Drawing.Point(25, 461);
+            this.lblOrdenar.Location = new System.Drawing.Point(3, 392);
             this.lblOrdenar.Name = "lblOrdenar";
-            this.lblOrdenar.Size = new System.Drawing.Size(93, 22);
+            this.lblOrdenar.Size = new System.Drawing.Size(76, 19);
             this.lblOrdenar.TabIndex = 13;
             this.lblOrdenar.Text = "ORDENAR";
             // 
             // btnPuntosJugadorDos
             // 
             this.btnPuntosJugadorDos.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPuntosJugadorDos.Location = new System.Drawing.Point(177, 522);
+            this.btnPuntosJugadorDos.Location = new System.Drawing.Point(162, 450);
             this.btnPuntosJugadorDos.Name = "btnPuntosJugadorDos";
             this.btnPuntosJugadorDos.Size = new System.Drawing.Size(152, 30);
             this.btnPuntosJugadorDos.TabIndex = 12;
@@ -101,7 +101,7 @@
             // btnPuntosJugadorUno
             // 
             this.btnPuntosJugadorUno.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPuntosJugadorUno.Location = new System.Drawing.Point(18, 522);
+            this.btnPuntosJugadorUno.Location = new System.Drawing.Point(3, 451);
             this.btnPuntosJugadorUno.Name = "btnPuntosJugadorUno";
             this.btnPuntosJugadorUno.Size = new System.Drawing.Size(153, 30);
             this.btnPuntosJugadorUno.TabIndex = 11;
@@ -112,7 +112,7 @@
             // btnEstadoSala
             // 
             this.btnEstadoSala.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstadoSala.Location = new System.Drawing.Point(114, 486);
+            this.btnEstadoSala.Location = new System.Drawing.Point(99, 414);
             this.btnEstadoSala.Name = "btnEstadoSala";
             this.btnEstadoSala.Size = new System.Drawing.Size(102, 30);
             this.btnEstadoSala.TabIndex = 10;
@@ -123,7 +123,7 @@
             // btnCreadorSala
             // 
             this.btnCreadorSala.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreadorSala.Location = new System.Drawing.Point(18, 486);
+            this.btnCreadorSala.Location = new System.Drawing.Point(3, 414);
             this.btnCreadorSala.Name = "btnCreadorSala";
             this.btnCreadorSala.Size = new System.Drawing.Size(90, 30);
             this.btnCreadorSala.TabIndex = 9;
@@ -134,7 +134,7 @@
             // btnCrearSala
             // 
             this.btnCrearSala.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearSala.Location = new System.Drawing.Point(355, 486);
+            this.btnCrearSala.Location = new System.Drawing.Point(332, 414);
             this.btnCrearSala.Name = "btnCrearSala";
             this.btnCrearSala.Size = new System.Drawing.Size(179, 30);
             this.btnCrearSala.TabIndex = 8;
@@ -145,7 +145,7 @@
             // btnEstadisticasUsuario
             // 
             this.btnEstadisticasUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstadisticasUsuario.Location = new System.Drawing.Point(624, 486);
+            this.btnEstadisticasUsuario.Location = new System.Drawing.Point(598, 414);
             this.btnEstadisticasUsuario.Name = "btnEstadisticasUsuario";
             this.btnEstadisticasUsuario.Size = new System.Drawing.Size(179, 30);
             this.btnEstadisticasUsuario.TabIndex = 7;
@@ -156,7 +156,7 @@
             // btnActualizarSalas
             // 
             this.btnActualizarSalas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarSalas.Location = new System.Drawing.Point(646, 6);
+            this.btnActualizarSalas.Location = new System.Drawing.Point(598, 6);
             this.btnActualizarSalas.Name = "btnActualizarSalas";
             this.btnActualizarSalas.Size = new System.Drawing.Size(179, 30);
             this.btnActualizarSalas.TabIndex = 6;
@@ -167,9 +167,9 @@
             // pictureBoxPantallaDeCarga
             // 
             this.pictureBoxPantallaDeCarga.Image = global::Hamer.Thomas.SegundoParcial.Properties.Resources.cargando;
-            this.pictureBoxPantallaDeCarga.Location = new System.Drawing.Point(284, 146);
+            this.pictureBoxPantallaDeCarga.Location = new System.Drawing.Point(264, 113);
             this.pictureBoxPantallaDeCarga.Name = "pictureBoxPantallaDeCarga";
-            this.pictureBoxPantallaDeCarga.Size = new System.Drawing.Size(297, 243);
+            this.pictureBoxPantallaDeCarga.Size = new System.Drawing.Size(274, 193);
             this.pictureBoxPantallaDeCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxPantallaDeCarga.TabIndex = 4;
             this.pictureBoxPantallaDeCarga.TabStop = false;
@@ -180,7 +180,7 @@
             this.lblSalas.AutoSize = true;
             this.lblSalas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSalas.Location = new System.Drawing.Point(415, 14);
+            this.lblSalas.Location = new System.Drawing.Point(370, 14);
             this.lblSalas.Name = "lblSalas";
             this.lblSalas.Size = new System.Drawing.Size(63, 22);
             this.lblSalas.TabIndex = 3;
@@ -200,10 +200,10 @@
             this.TiempoDePartida,
             this.ID,
             this.IdCreador});
-            this.DGVSalas.Location = new System.Drawing.Point(58, 42);
+            this.DGVSalas.Location = new System.Drawing.Point(28, 42);
             this.DGVSalas.Name = "DGVSalas";
             this.DGVSalas.ReadOnly = true;
-            this.DGVSalas.Size = new System.Drawing.Size(745, 416);
+            this.DGVSalas.Size = new System.Drawing.Size(749, 347);
             this.DGVSalas.TabIndex = 2;
             this.DGVSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSalas_CellClick);
             // 
@@ -283,7 +283,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(59)))), ((int)(((byte)(108)))));
-            this.ClientSize = new System.Drawing.Size(877, 557);
+            this.ClientSize = new System.Drawing.Size(814, 478);
             this.Controls.Add(this.panelSalas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalasPartida";
